@@ -40,6 +40,3 @@ The current goal is to build a simple, static website using HTML, CSS, and JavaS
 ### **How to Contribute (Learning and Sharing)**
 As I continue to learn, I encourage feedback and contributions to this repository. If you have suggestions for improvements, feel free to submit a pull request. This project is a personal learning experience, and I'd love to improve my skills with feedback from others!
 
-### **Future Updates**
-Once the website is deployed and fully developed, this README will be updated to reflect the final product, including the live link and detailed descriptions of the features.
-
