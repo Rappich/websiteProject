@@ -1,1 +1,20 @@
-vscode/
+# Ignore node_modules (if using npm)
+node_modules/
+
+# Ignore build/dist files
+dist/
+
+# Ignore system files
+.DS_Store  # macOS
+Thumbs.db  # Windows
+
+# Ignore IDE and editor settings
+.vscode/
+.idea/
+*.log
+*.swp
+
+
+# Ignore environment/config files (if needed)
+.env
+config.json
