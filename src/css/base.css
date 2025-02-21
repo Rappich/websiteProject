@@ -1,27 +1,50 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Base Styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    margin: 0px;
+    font-family: sans-serif;
+    font-size: 30px;
 }
 
-html,
-body {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
+body::-webkit-scrollbar {
+    display: none;
 }
 
-main {
-    flex: 1;
-    padding-top: 80px;
+/* Common Text Align Classes */
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+/* Common Margin Classes */
+.m0 {
+    margin: 0;
+}
+
+.mb75px {
+    margin-bottom: 75px;
+}
+
+.mb50px {
+    margin-bottom: 50px;
+}
+
+/* common color classes */
+.text-highlight {
+    color: #2857a4;
+    font-weight: 600;
+}
+
+.profile-picture img {
+    max-width: 150px;
+    /* or any preferred size */
+    height: auto;
+    border-radius: 50%;
+    margin-top: 20px;
 }

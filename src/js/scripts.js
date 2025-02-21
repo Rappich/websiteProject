@@ -9,12 +9,19 @@ document.addEventListener("DOMContentLoaded", function () {
             const email = document.getElementById("email").value.trim();
             const message = document.getElementById("message").value.trim();
 
-            if (name === "" || email === "" || message === "") {
+            if (!validateEmail(email)) {
+                alert("Please enter a valid email address.");
+            } else if (name === "" || message === "") {
                 alert("Please fill in all fields.");
             } else {
                 alert("Message sent successfully!");
                 form.reset();
             }
         });
+    }
+
+    function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(String(email).toLowerCase());
     }
 });

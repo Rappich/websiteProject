@@ -1,23 +1,71 @@
-/* hero.css */
-
-.hero {
-    background: url('../assets/images/hero-image.jpg') no-repeat center center/cover;
-    color: white;
-    text-align: center;
-    padding: 100px 20px;
-    min-height: 400px;
+/* Body Header */
+#body-header {
+    height: 65vh;
+    opacity: 0.8;
+    background-image: url(https://ninjasfiles.s3.amazonaws.com/asset_0000000000000020_1549743985_macbook_mouse.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding-top: 1.2rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
-.hero-text h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
+/* Name and Social Container */
+#name-social-container {
+    text-align: center;
+    padding-top: 10vh;
+    /* Space at the top */
 }
 
-.hero-text p {
+/* Name Section */
+#my-name {
+    font-size: 3rem;
+    letter-spacing: 0.1rem;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    /* Add spacing between name and social icons */
+}
+
+/* Social Icons Section */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+    /* Space between social icons and picture */
+}
+
+.social-icons li {
+    margin: 0 15px;
+    /* Spacing between icons */
+}
+
+.social-icons li a {
     font-size: 1.5rem;
-    margin-bottom: 30px;
+    color: #0077b5;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.social-icons li a:hover {
+    color: #005b8d;
+    box-shadow: 0px 0px 6px 4px rgba(230, 196, 196, 0.3);
+}
+
+/* Profile Picture Section */
+.profile-picture img {
+    width: 150px;
+    /* Set a specific width */
+    height: 150px;
+    /* Set a specific height */
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 1px 1px 10px 2px lightgrey;
+    margin-top: 20px;
+    /* Add space between social icons and picture */
 }
