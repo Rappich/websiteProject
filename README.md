@@ -1,42 +1,37 @@
+# Resume & Company Website - Rappich Consulting AB
 
-# Rappich Consulting AB - Website (Learning Journey)
+## Overview
 
-## Introduction
-This repository is part of my ongoing journey in learning web development. I'm currently building a website for my company, **Rappich Consulting AB**, while learning key programming languages such as HTML, CSS, JavaScript, C++, and more. The website is meant to be the frontpage of my consulting business, which focuses on both HR services and IT development, specifically digital transformation and web development.
+Welcome to my personal **Resume** and **Company** website! My name is **Fredrik Rappich**, and I’m a former HR professional who is currently transitioning into the **IT field**. I’m mainly focused on **C/C++** development, but I’m creating this website as part of my journey to learn how to build and deploy websites. 
 
-### **Why This Project?**
-As part of my transition into the IT field, I am learning how to develop websites and web applications. The website will serve as both a learning platform and a professional portfolio that I can showcase to potential clients or employers.
+This site serves as both a personal resume and a showcase for **Rappich Consulting AB**, the company I run, offering **HR** and **IT development** consulting services. Through this project, I aim to develop my skills in **front-end web development**, **design**, and **deployment**, while also creating a professional presence online.
 
-### **What I'm Learning**
-- **HTML/CSS**: How to structure and style a website.
-- **JavaScript**: Making the website interactive and responsive.
-- **Git/GitHub**: Learning version control and hosting a live site on GitHub Pages.
-- **C++**: Integrating backend technologies and learning systems programming.
+---
 
-### **Tech Stack**
-This is the tech stack I plan to use and learn during the process:
-- **Frontend**:
-  - HTML5: For website structure and content.
-  - CSS3: For styling and design.
-  - JavaScript: For interactivity and dynamic behavior.
-- **Version Control**:
-  - Git: To manage versions and track changes.
-  - GitHub: To host the repository and deploy the website using GitHub Pages.
-- **Backend** (future development):
-  - C++: Learning backend programming and how to work with databases.
-  - Node.js (Optional): For backend web development with JavaScript.
-  - SQL/NoSQL (Optional): To manage and store data.
-- **Hosting**:
-  - GitHub Pages: For free static website hosting.
+The website includes sections such as:
+- **About Me**
+- **Skills**
+- **Projects**
+- **Experience**
+- **Education**
+- **Contact**
 
-### **Current Goal**
-The current goal is to build a simple, static website using HTML, CSS, and JavaScript that showcases the services and vision of Rappich Consulting AB. Later on, I will integrate more advanced technologies such as backend programming and databases.
+Additionally, I’ve incorporated a company page showcasing **Rappich Consulting AB**, with details about our consulting services in **HR** and **IT development**.
 
-### **Project Structure**
-1. **index.html**: Homepage structure and layout.
-2. **styles.css**: Styling for the website.
-3. **scripts.js**: Interactive features and form validation.
+## Table of Contents
 
-### **How to Contribute (Learning and Sharing)**
-As I continue to learn, I encourage feedback and contributions to this repository. If you have suggestions for improvements, feel free to submit a pull request. This project is a personal learning experience, and I'd love to improve my skills with feedback from others!
+- [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Contributing](#contributing)
+- [License](#license)
 
+
+## Installation
+
+To get the website running locally, follow the steps below:
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/Rappich/websiteProject.git
