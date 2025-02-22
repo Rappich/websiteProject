@@ -61,6 +61,37 @@
     left: -9%;
 }
 
+#timeline-divider {
+    position: absolute;
+    width: 0;
+    top: 10px;
+    /* Adjust this to move the plane up/down */
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px dashed gray;
+}
+
+.timeline-traveller {
+    position: absolute;
+    top: 0;
+    /* Adjust if the plane is misplaced */
+    left: 50%;
+    transform: translateX(-50%);
+    /*     animation: movePlane 5s linear infinite; */
+
+}
+
+@keyframes movePlane {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: 100%;
+    }
+}
+
 /* Portfolio Section */
 #portfolio-container {
     box-sizing: border-box;

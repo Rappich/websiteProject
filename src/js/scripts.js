@@ -25,3 +25,16 @@ document.addEventListener("DOMContentLoaded", function () {
         return re.test(String(email).toLowerCase());
     }
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const plane = document.querySelector(".timeline-traveller");
+
+    window.addEventListener("scroll", function () {
+        const scrollPosition = window.scrollY;
+        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+        const planePosition = (scrollPosition / maxScroll) * 100;
+
+        plane.style.top = planePosition + "%";
+    });
+});
