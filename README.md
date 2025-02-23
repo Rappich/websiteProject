@@ -18,20 +18,3 @@ The website includes sections such as:
 
 Additionally, I’ve incorporated a company page showcasing **Rappich Consulting AB**, with details about our consulting services in **HR** and **IT development**.
 
-## Table of Contents
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Contributing](#contributing)
-- [License](#license)
-
-
-## Installation
-
-To get the website running locally, follow the steps below:
-
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/Rappich/websiteProject.git
