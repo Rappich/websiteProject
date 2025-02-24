@@ -1,5 +1,5 @@
 /* Skills Section */
-.skills-display {
+/* .skills-display {
     width: 75%;
     padding: 10px;
     margin-bottom: 30px;
@@ -65,7 +65,6 @@
     position: absolute;
     width: 0;
     top: 10px;
-    /* Adjust this to move the plane up/down */
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
@@ -77,20 +76,23 @@
     top: 0;
     /* Adjust if the plane is misplaced */
     left: 50%;
-    transform: translateX(-50%);
-    /*     animation: movePlane 5s linear infinite; */
+    color: #002e44;
+    transform: rotate(90deg);
+    transition: top 0.3s ease-out;
 
 }
 
-@keyframes movePlane {
-    0% {
-        top: 0;
-    }
-
-    100% {
-        top: 100%;
-    }
+.timeline-traveller.plane {
+    color: #002e44;
+    transform: rotate(90deg);
 }
+
+.timeline-traveller.car {
+    color: #002e44;
+    /* Example color for the car */
+    transform: rotate(90deg);
+}
+
 
 /* Portfolio Section */
 #portfolio-container {
