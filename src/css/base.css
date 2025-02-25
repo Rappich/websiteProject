@@ -48,3 +48,10 @@ body::-webkit-scrollbar {
     border-radius: 50%;
     margin-top: 20px;
 }
+
+.experience-image {
+    width: 200px;
+    height: auto;
+    max-width: 200%;
+    max-height: 200px;
+}
