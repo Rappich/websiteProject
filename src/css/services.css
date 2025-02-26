@@ -1,5 +1,5 @@
 /* Skills Section */
-/* .skills-display {
+.skills-display {
     width: 75%;
     padding: 10px;
     margin-bottom: 30px;
@@ -59,6 +59,28 @@
 
 .timeline-box:nth-child(2n)::after {
     left: -9%;
+}
+
+.timeline-box ul {
+    list-style: none;
+    padding-left: 1.2em;
+    position: 0;
+}
+
+.timeline-box ul li {
+    margin-bottom: 0.5em;
+    padding-left: 1em;
+    position: relative;
+    text-align: left;
+}
+
+.timeline-box ul li::before {
+    content: "\2022";
+    color: #2857a4;
+    font-size: 1.2em;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
 #timeline-divider {
