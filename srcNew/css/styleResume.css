@@ -107,5 +107,12 @@ a:hover {
     transition: all 0.3s ease-in-out;
 }
 
+.menu-links a {
+    display: block;
+    padding: 1rem;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+}
 
 /* Minute 32:00 */
