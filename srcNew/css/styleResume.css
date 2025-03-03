@@ -9,7 +9,7 @@
 }
 
 body {
-    font-family: "Poppins", serif;
+    font-family: "Poppins", sans-serif;
 }
 
 html {
@@ -17,7 +17,7 @@ html {
 }
 
 p {
-    color: rbg(85, 85, 85);
+    color: rgb(85, 85, 85);
 }
 
 /* TRANSITION */
@@ -155,7 +155,7 @@ a:hover {
 section {
     padding-top: 4vh;
     height: 96vh;
-    margin: 0 10 rem;
+    margin: 0 10rem;
     box-sizing: border-box;
     min-height: fit-content;
 }
@@ -169,8 +169,10 @@ section {
 #profile {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 5rem;
     height: 80vh;
+    padding-bottom: 8rem;
 }
 
 .section__pic-container {
@@ -178,6 +180,22 @@ section {
     height: 400px;
     width: 400px;
     margin: auto 0;
+}
+
+.profile-picture-container {
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+}
+
+.profile-picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 .section__text {
@@ -193,7 +211,7 @@ section {
     text-align: center;
 }
 
-.section__text__p1 {
+.section__text__p2 {
     font-size: 1.75rem;
     margin-bottom: 1rem;
 }
@@ -203,20 +221,159 @@ section {
     text-align: center;
 }
 
-#social-container {
+#socials-container {
     display: flex;
     justify-content: center;
     gap: 1rem;
     margin-top: 1rem;
 }
 
-
-
 /* ICON */
-
 .icon {
     cursor: pointer;
     height: 2rem;
 }
 
-/* 53:00 */
+#socials-container {
+    display: flex;
+    justify-content: center;
+    gap: 0.25rem;
+    margin-top: 0.15rem;
+}
+
+.social-icons {
+    cursor: pointer;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 0rem;
+    list-style: none;
+    padding: 0;
+}
+
+.social-icons li {
+    margin: 5px;
+}
+
+.social-icons li a {
+    font-size: 2rem;
+    color: #000000;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.social-icons li a:hover {
+    color: rgb(53, 53, 53)
+}
+
+/* BUTTONS */
+
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.contact-btns {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    font-weight: 600;
+    transition: all 0.3s ease;
+    padding: 1rem;
+    width: 8rem;
+    border-radius: 2rem;
+}
+
+.btn-color-1,
+.btn-color-2 {
+    border: rgb(53, 53, 53)0.1rem solid;
+}
+
+.btn-color-1:hover,
+.btn-color-2:hover {
+    cursor: pointer;
+}
+
+.btn-color-1,
+.btn-color-2:hover {
+    background: rgb(53, 53, 53);
+    color: white;
+}
+
+.btn-color-1:hover {
+    background: rgb(0, 0, 0);
+}
+
+.btn-color-2 {
+    background: none;
+}
+
+.btn-color-2:hover {
+    border: rgb(255, 255, 255)0.1rem solid;
+}
+
+/* ABOUT SECTION */
+
+#about {
+    position: relative;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 8rem;
+
+}
+
+.about-containers {
+    gap: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+
+}
+
+.about-details-container {
+    justify-content: center;
+    flex-direction: column;
+    flex: 1;
+    padding-left: 4rem;
+    /* Allow text container to expand */
+}
+
+.about-containers,
+.about-details-container {
+    display: flex;
+}
+
+.about-pic {
+    border-radius: 2rem;
+}
+
+.arrow {
+    position: absolute;
+    right: -5rem;
+    bottom: 2.5rem;
+}
+
+.details-container {
+    padding: 1.5rem;
+    flex: 1;
+    background: white;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    text-align: center;
+}
+
+.section-container {
+    flex: 0 0 auto;
+}
+
+/* about me section complete, ensure we add a correct CV link to my work experience etc. */
