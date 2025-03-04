@@ -323,28 +323,15 @@ section {
     position: relative;
 }
 
-.about-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 2rem;
-    padding-top: 8rem;
-
-}
-
 .about-containers {
     gap: 2rem;
     margin-bottom: 2rem;
     margin-top: 2rem;
-
 }
 
 .about-details-container {
     justify-content: center;
     flex-direction: column;
-    flex: 1;
-    padding-left: 4rem;
-    /* Allow text container to expand */
 }
 
 .about-containers,
@@ -373,7 +360,81 @@ section {
 }
 
 .section-container {
-    flex: 0 0 auto;
+    gap: 4rem;
+    height: 80%;
 }
 
-/* about me section complete, ensure we add a correct CV link to my work experience etc. */
+.section__pic-container {
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
+    transform: translateX(-20%);
+}
+
+/* ABOUT-SECTION EXPAND BUTTON */
+.expand-btn {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    padding: 1rem;
+    width: 15rem;
+    height: 4rem;
+    border-radius: 2rem;
+    background: none;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    color: rgb(0, 0, 0);
+}
+
+.expand-btn:hover {
+    background: rgb(0, 0, 0);
+    color: white;
+    cursor: pointer;
+}
+
+/* ABOUT-SECTION EXPANDED TIMELINE */
+
+#cv-details {
+    display: none;
+}
+
+.timeline {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background-color: #ccc;
+}
+
+.timeline-item {
+    width: 50%;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.timeline-item.left {
+    left: 0;
+    padding-right: 20px;
+    text-align: right;
+}
+
+.timeline-item.right {
+    left: 50%;
+    padding-left: 20px;
+}
+
+.timeline-content {
+    background-color: #f0f0f0;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+/* comment before commit */
