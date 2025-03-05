@@ -8,6 +8,8 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="css/styleResume.css">
     <link rel="stylesheet" href="css/mediaqueries.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
 </head>
 
 <body>
@@ -41,7 +43,34 @@
             </div>
         </div>
     </nav>
+    <section id="profile">
+        <div class="section__pic-container">
+            <img src="img/cvbild.jpg" alt="Fredrik Rappich profile picture">
+        </div>
+        <div class="section__text-container">
+            <p class="section__text__p1">Hello, I'm </p>
+            <h1 class="title">Fredrik Rappich</h1>
+            <p class="section__text__p2">Software Developer</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2" onclick="window.open('./assets/resume-example.pdf')">Download
+                    CV</button>
+                <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact info</button>
+                <div id="socials-container">
+                    <ul class="social-icons">
+                        <li>
+                            <a href="https://www.linkedin.com/in/fredrik-m%C3%A5rtensson-6b3092138/">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/Rappich" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    </section>
     <script src="js/scriptResume.js"></script>
-</body>
 
 </html>
