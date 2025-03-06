@@ -321,6 +321,7 @@ section {
 
 #about {
     position: relative;
+    height: 94vh;
 }
 
 .about-containers {
@@ -346,7 +347,7 @@ section {
 .arrow {
     position: absolute;
     right: -5rem;
-    bottom: 2.5rem;
+    bottom: 4rem;
 }
 
 .details-container {
@@ -361,7 +362,6 @@ section {
 
 .section-container {
     gap: 4rem;
-    height: 80%;
 }
 
 .section__pic-container {
@@ -371,26 +371,100 @@ section {
     transform: translateX(-20%);
 }
 
+/* EXPERIENCE SECTION */
+
+#experience {
+    position: relative;
+    gap: 4rem;
+    height: 94vh;
+}
+
+.experience-sub-title {
+    color: rgb(85, 85, 85);
+    font-weight: 600;
+    font-size: 1.75rem;
+    margin-bottom: 6rem;
+}
+
+.experience-details-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.article-container {
+    display: flex;
+    text-align: initial;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2.5rem;
+    justify-content: space-around;
+}
+
+.details-container-with-btn {
+    position: relative;
+    padding: 1.5rem;
+    flex: 1;
+    background: white;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    text-align: center;
+    height: 50vh;
+
+}
+
+article {
+    display: flex;
+    width: 10rem;
+    justify-content: space-around;
+    gap: 0.5rem;
+}
+
+article .icon {
+    cursor: default;
+}
+
 /* ABOUT-SECTION EXPAND BUTTON */
-.expand-btn {
+
+.expand-button-container {
     position: absolute;
-    bottom: 2.5rem;
-    left: 1.5rem;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+}
+
+.expand-btn {
     font-weight: 600;
     transition: all 0.3s ease;
-    padding: 1rem;
-    width: 15rem;
-    height: 4rem;
+    width: 90%;
+    margin-bottom: 2rem;
+    height: 6rem;
+    background-image: url(../assets/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     border-radius: 2rem;
-    background: none;
-    border: rgb(53, 53, 53) 0.1rem solid;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .expand-btn:hover {
-    background: rgb(0, 0, 0);
-    color: white;
     cursor: pointer;
+    opacity: 0.8;
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.expand-btn:focus {
+    outline: 2px solid rgba(0, 123, 255, 0.5);
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+.expand-btn:active {
+    transform: scale(0.98);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* ABOUT-SECTION EXPANDED TIMELINE */
