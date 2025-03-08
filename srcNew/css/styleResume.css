@@ -427,6 +427,8 @@ article .icon {
 
 /* ABOUT-SECTION EXPAND BUTTON */
 
+/* Make this button stickt, so it follow you through the extended part */
+
 .expand-button-container {
     position: absolute;
     width: 100%;
