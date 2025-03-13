@@ -410,7 +410,7 @@ section {
     border: rgb(53, 53, 53) 0.1rem solid;
     border-color: rgb(163, 163, 163);
     text-align: center;
-    height: 50vh;
+    height: 34vh;
 
 }
 
@@ -437,12 +437,11 @@ article .icon {
 }
 
 .expand-btn {
-    font-weight: 600;
+    font-weight: 800;
     transition: all 0.3s ease;
     width: 90%;
     margin-bottom: 2rem;
     height: 6rem;
-    background-image: url(../assets/background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -451,6 +450,15 @@ article .icon {
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
+
+.expand-btn.work-experience {
+    background-image: url(assets/background2.png);
+}
+
+.expand-btn.education {
+    background-image: url(assets/background3.png);
+}
+
 
 .expand-btn:hover {
     cursor: pointer;
@@ -471,7 +479,8 @@ article .icon {
 
 /* ABOUT-SECTION EXPANDED TIMELINE */
 
-#cv-details {
+#expanded-work-experience,
+#expanded-education {
     display: none;
 }
 

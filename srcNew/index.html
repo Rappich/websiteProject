@@ -80,7 +80,7 @@
         <h1 class="title">About Me</h1>
         <div class="section-container">
             <div class="section__pic-container">
-                <img src="./assets/cvbild.jpg" alt="Profile picture" class="about-pic" />
+                <img src="./assets/MC4.jpg" alt="Profile picture" class="about-pic" />
             </div>
             <div class="about-details-container">
                 <div class="about-containers">
@@ -142,13 +142,13 @@
                             </div>
                         </article>
                         <div class="expand-button-container">
-                            <button id="expand-cv-btn" class="expand-btn">
-                                Expand CV (See CV Details)
+                            <button class="expand-btn work-experience" data-target="expanded-work-experience">
+                                Press to see my Work Experience
                             </button>
                         </div>
                     </div>
                 </div>
-                <div class="details-container">
+                <div class="details-container-with-btn">
                     <h2 class="experience-sub-title">Backend Development</h2>
                     <div class="article-container">
                         <article>
@@ -186,14 +186,38 @@
                                 <p>Intermediate</p>
                             </div>
                         </article>
+                        <div class="expand-button-container">
+                            <button class="expand-btn education" data-target="expanded-education">
+                                Press to see my Education
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
     </section>
-    <section id="cv-details">
-        <h2>CV Details</h2>
+    <section id="expanded-work-experience" class="expandable-section" style="display:none;">
+        <h2>Work Experience</h2>
+        <div class="timeline">
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <h3>Job Title 1</h3>
+                    <p>Company Name 1 - Dates</p>
+                    <p>Description of job responsibilities.</p>
+                </div>
+            </div>
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <h3>Education 1</h3>
+                    <p>University Name 1 - Dates</p>
+                    <p>Description of degree and courses.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="expanded-education" class="expandable-section" style="display:none;">
+        <h2>Education</h2>
         <div class="timeline">
             <div class="timeline-item left">
                 <div class="timeline-content">

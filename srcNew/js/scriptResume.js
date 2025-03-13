@@ -6,17 +6,24 @@ function togglemenu() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    const expandBtn = document.getElementById('expand-cv-btn');
-    const cvDetailsSection = document.getElementById('cv-details');
+    document.querySelectorAll('.expand-btn').forEach(button => {
+        button.addEventListener('click', function () {
 
-    if (expandBtn && cvDetailsSection) {
-        expandBtn.addEventListener('click', function () {
-            if (cvDetailsSection.style.display === 'none' || cvDetailsSection.style.display === '') {
-                cvDetailsSection.style.display = 'block';
-                cvDetailsSection.scrollIntoView({ behavior: 'smooth' });
+            const targetId = this.getAttribute('data-target');
+            const section = document.getElementById(targetId);
+
+            document.querySelectorAll('.expandable-section').forEach(s => {
+                if (s !== section) {
+                    s.style.display = 'none';
+                }
+            });
+
+            if (section.style.display === 'none' || section.style.display === '') {
+                section.style.display = 'block';
+                section.scrollIntoView({ behavior: 'smooth' }); // Scroll to the section
             } else {
-                cvDetailsSection.style.display = 'none';
+                section.style.display = 'none';
             }
         });
-    }
+    });
 });
