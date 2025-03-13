@@ -452,11 +452,11 @@ article .icon {
 }
 
 .expand-btn.work-experience {
-    background-image: url(assets/background2.png);
+    background-image: url(../assets/background2.png);
 }
 
 .expand-btn.education {
-    background-image: url(assets/background3.png);
+    background-image: url(../assets/background3.png);
 }
 
 
