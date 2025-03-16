@@ -7,3 +7,19 @@
         display: flex;
     }
 }
+
+@media screen and (max-width: 1200px) {
+    .timeline-box {
+        width: 90%;
+        left: 5%;
+        text-align: left;
+    }
+
+    .timeline-box::before {
+        left: 50%;
+    }
+
+    .timeline-box.right {
+        left: 5%;
+    }
+}
