@@ -496,7 +496,7 @@ article .icon {
 
 #timeline-divider {
     position: absolute;
-    width: 4px;
+    width: 3px;
     background: rgb(53, 53, 53);
     top: 0;
     bottom: 2rem;
@@ -528,13 +528,22 @@ article .icon {
     gap: 10px;
 }
 
+.timeline-logo {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    width: 120px;
+    height: 120px;
+    background-color: white;
+    border-radius: 50%;
+    border: 2px solid rgb(53, 53, 53);
+}
 
-/* Experience Image */
 .experience-image {
     width: 100px;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background-color: white;
 }
