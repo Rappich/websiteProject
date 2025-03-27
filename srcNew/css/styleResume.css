@@ -406,7 +406,6 @@ section {
     flex-wrap: wrap;
     flex-direction: row;
     gap: 2.5rem;
-    justify-content: space-around;
 }
 
 .details-container-with-btn {
@@ -447,8 +446,9 @@ article .icon {
 .expand-btn {
     font-weight: 800;
     transition: all 0.3s ease;
-    width: 90%;
+    width: 80%;
     margin-bottom: 2rem;
+    margin-right: 3rem;
     height: 6rem;
     background-size: cover;
     background-repeat: no-repeat;
