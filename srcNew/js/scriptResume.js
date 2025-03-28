@@ -20,10 +20,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
             if (section.style.display === 'none' || section.style.display === '') {
                 section.style.display = 'block';
-                section.scrollIntoView({ behavior: 'smooth' }); // Scroll to the section
+                section.scrollIntoView({ behavior: 'smooth' });
             } else {
                 section.style.display = 'none';
             }
         });
     });
 });
+
+function closeExpandedSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+        section.style.display = 'none';
+        const experienceSection = document.getElementById('experience');
+        if (experienceSection) {
+            experienceSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+}

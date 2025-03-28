@@ -109,8 +109,8 @@
                 </div>
             </div>
         </div>
-        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
-    </section>
+        <i class="fas fa-arrow-down icon arrow" onclick="location.href='./#experience'"
+            aria-label="Go to experience section"></i>
     </section>
     <section id="experience">
         <p class="section__text__p1">Explore My</p>
@@ -195,7 +195,8 @@
                 </div>
             </div>
         </div>
-        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
+        <i class="fas fa-arrow-down icon arrow" onclick="location.href='./#projects'"
+            aria-label="Go to projects section"></i>
     </section>
     <section id="expanded-work-experience" class="expandable-section" style="display:none;">
         <h1 class="title">Work Experience</h1>
@@ -356,6 +357,8 @@
             </div>
 
         </div>
+        <i class="fas fa-times icon arrow close-btn" onclick="closeExpandedSection('expanded-work-experience')"
+            aria-label="Close work experience section"></i>
     </section>
     <section id="expanded-education" class="expandable-section" style="display:none;">
         <h2>Education</h2>
@@ -375,6 +378,8 @@
                 </div>
             </div>
         </div>
+        <i class="fas fa-times icon arrow close-btn" onclick="closeExpandedSection('expanded-education')"
+            aria-label="Close education section"></i>
     </section>
     <script src="js/scriptResume.js"></script>
 

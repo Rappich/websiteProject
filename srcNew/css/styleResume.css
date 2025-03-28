@@ -352,10 +352,18 @@ section {
     border-radius: 2rem;
 }
 
+/* In styleResume.css */
 .arrow {
     position: absolute;
     right: -5rem;
     bottom: 4rem;
+    cursor: pointer;
+    font-size: 2rem;
+    color: black;
+}
+
+.arrow:hover {
+    color: grey;
 }
 
 .details-container {
@@ -485,10 +493,30 @@ article .icon {
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+/* CLOSE BUTTON EXPAND SECTION */
+#expanded-work-experience .icon.arrow.close-btn,
+#expanded-education .icon.arrow.close-btn {
+    cursor: pointer;
+    position: absolute;
+    right: -5rem;
+    bottom: 4rem;
+    top: auto;
+    font-size: 2rem;
+    color: black;
+    z-index: 10;
+}
+
+#expanded-work-experience .icon.arrow.close-btn:hover,
+#expanded-education .icon.arrow.close-btn:hover {
+    color: grey;
+    /* Hover effect */
+}
+
 /* ABOUT-SECTION EXPANDED TIMELINE */
 #expanded-work-experience,
 #expanded-education {
     display: none;
+    position: relative;
 }
 
 /* Timeline Container */
