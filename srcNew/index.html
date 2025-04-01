@@ -85,12 +85,12 @@
             <div class="about-details-container">
                 <div class="about-containers">
                     <div class="details-container">
-                        <img src="./assets/experience.png" alt="Experience icon" class="icon" />
+                        <img src="./assets/experience.png" alt="Experience icon" class="icon about-img" />
                         <h3>Professional Background</h3>
                         <p>9+ years <br> Strategic HR and process optimization</p>
                     </div>
                     <div class="details-container">
-                        <img src="./assets/education.png" alt="Education icon" class="icon" />
+                        <img src="./assets/education.png" alt="Education icon" class="icon about-img" />
                         <h3>Education</h3>
                         <p>B.Sc. Psychology <br> System Development (Current)</p>
                     </div>
@@ -397,12 +397,15 @@
         <p class="section__text__p1">Browse My Recent</p>
         <h1 class="title">Projects</h1>
         <div class="projects-details-container">
-            <div class="about-containers">
-                <div class="details-container color-container">
-                    <div class="article-container">
-                        <img src="./assets/www.png" alt="Project 1" class="project-img" />
+            <div class="about-containers projects-wrapper">
+                <div class="details-container color-container project-wrapper">
+                    <div class="project-card-header">
+                        <div class="article-container">
+                            <img src="./assets/www.png" alt="Project 1" class="project-img" />
+                        </div>
+                        <h2 class="experience-sub-title project-title">Website Project</h2>
                     </div>
-                    <h2 class="experience-sub-title project-title">Website Project</h2>
+                   <div class="project-card-footer">
                     <p class="project-description">Work in progress</p>
                     <div class="btn-container">
                         <button class="btn btn-color-2 project-btn"
@@ -414,12 +417,16 @@
                             Live Demo
                         </button>
                     </div>
+                   </div>
                 </div>
-                <div class="details-container color-container">
-                    <div class="article-container">
-                        <img src="./assets/munchkin.jpg" alt="Project 2" class="project-img" />
+                <div class="details-container color-container project-wrapper">
+                    <div class="project-card-header">
+                        <div class="article-container">
+                            <img src="./assets/munchkin.jpg" alt="Project 2" class="project-img" />
+                        </div>
+                        <h2 class="experience-sub-title project-title">Munchkin Game</h2>
                     </div>
-                    <h2 class="experience-sub-title project-title">Munchkin Game</h2>
+                    <div class="project-card-footer">
                     <p class="project-description">Work in progress</p>
                     <div class="btn-container">
                         <button class="btn btn-color-2 project-btn"
@@ -432,10 +439,14 @@
                         </button>
                     </div>
                 </div>
-                <div class="details-container color-container">
+                </div>
+                <div class="details-container color-container project-wrapper">
+                    <div class="project-card-header">
                     <div class="article-container">
                         <img src="./assets/AWS2.jpg" alt="Project 3" class="project-img" />
                     </div>
+                </div>
+                <div class="project-card-footer">
                     <h2 class="experience-sub-title project-title">Automated Watering System</h2>
                     <p class="project-description">IoT - School project</p>
                     <div class="btn-container">
@@ -449,6 +460,7 @@
                         </button>
                     </div>
                 </div>
+            </div>
             </div>
         </div>
         <i class="fas fa-arrow-down icon arrow" onclick="location.href='./#contact'"
