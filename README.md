@@ -1,37 +1,45 @@
-# Website Project - WORK IN PROGRESS
+# Website Project - Work in Progress 🚀  
 
-## Overview
+## Overview  
 
-Welcome to my personal Resume and Company website! My name is **Fredrik Rappich**, and I’m a former HR professional transitioning into the IT field. While my primary focus is on C/C++ development, this project is part of my journey to learn web development and deployment.
+Welcome to my personal **resume and company website**! My name is **Fredrik Rappich**, a former **HR professional** transitioning into **IT development**, specializing in **C/C++ programming**.  
 
-## Learning Journey
+I started this project with **HTML, CSS, and JavaScript** to build a solid foundation in web development. As I progress, I’m integrating **React, Node.js, Tailwind CSS, and TypeScript** to create a modern, scalable web application.  
 
-I am starting by building this website using **HTML**, **CSS**, and **JavaScript** to gain a solid foundation in front-end web development. Once I have familiarized myself with these technologies, I plan to recreate the project using **React**, **Node.js**, **Tailwind** & **Typescript** to deepen my understanding of modern web development frameworks.
+This project serves as both:  
+✅ A personal **resume website**  
+✅ A showcase for **Rappich Consulting AB**, my consulting business in **HR & IT**  
 
-## Purpose
+---
 
-This site serves as both a personal resume and a showcase for **Rappich Consulting AB**, the company I run part-time while learning system development. The company offers consulting services in **HR** and **IT development**. Through this project, I aim to:
+## Project Goals  
 
-- Develop my skills in front-end and back-end web technologies.
-- Learn how to build and deploy websites effectively.
-- Establish a professional online presence.
+- Develop practical skills in **HTML, CSS, JavaScript, React, Node.js, Tailwind CSS, and TypeScript**  
+- Learn how to build, optimize, and deploy websites  
+- Establish a **professional online presence**  
+- Showcase my **IoT, backend, and C/C++ projects**  
 
-## Website Features
+---
 
-The website includes the following sections:
+## Website Features  
 
-- **About Me**
-- **Skills**
-- **Projects**
-- **Experience**
-- **Education**
-- **Contact**
-- **Company Page**: Showcasing **Rappich Consulting AB**, with details about our HR and IT consulting services.
+📌 **About Me** – My background, skills & journey into IT  
+📌 **Skills** – Technologies & programming languages I’m proficient in  
+📌 **Projects** – Showcasing **IoT, backend, and C/C++ projects**  
+📌 **Experience & Education** – My professional & academic background  
+📌 **Contact** – Get in touch with me  
+📌 **Company Page** – Details about **Rappich Consulting AB** and its services in **HR & IT**  
 
-## Future Plans
+---
 
-Once I have completed the initial version of the site, I will move on to:
+## Repository Structure  
 
-- Rebuilding it with **React** (for the front end) and **Node.js** (for the back end).
-- Implementing a more dynamic and interactive user experience.
-- Exploring hosting, databases, and authentication for a full-stack application.
+```plaintext
+websiteProject/
+├── srcNew/                 # Original HTML, CSS, JS website
+├── react-js-portfolio/     # New React-based version
+├── portfolio/              # Additional portfolio-related content
+├── README.md               # Project overview & documentation
+├── .gitignore              # Ignored files
+├── todo.md                 # Development roadmap
+└── package.json            # Project dependencies
