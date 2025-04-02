@@ -8,7 +8,7 @@ I started this project with **HTML, CSS, and JavaScript** to build a solid found
 
 This project serves as both:  
 - A personal **resume website**
--  A showcase for **Rappich Consulting AB**, my consulting business in **HR & IT**  
+- A showcase for **Rappich Consulting AB**, my consulting business in **HR & IT**  
 
 ---
 
@@ -16,7 +16,7 @@ This project serves as both:
 
 - Develop practical skills in **HTML, CSS, JavaScript, React, Node.js, Tailwind CSS, and TypeScript**  
 - Learn how to build, optimize, and deploy websites  
-- Establish a **professional online presence**  
+- Establish a **professional online presence** and delve deeper into front-end development, a area i'm not studying in school
 
 ---
 
