@@ -1,4 +1,4 @@
-# Website Project - Work in Progress  
+# Website Project - Work in Progress 🚀  
 
 ## Overview  
 
@@ -20,11 +20,30 @@ This project serves as both:
 
 ---
 
+## Tools & Technologies  
+
+### **Languages & Frameworks**  
+✅ HTML, CSS, JavaScript  
+✅ React, Node.js, TypeScript  
+✅ Tailwind CSS  
+
+### **Development & Build Tools**  
+✅ npm / Yarn – Package management  
+✅ Vite – Fast build tool for React  
+✅ Webpack – Module bundler  
+
+### **Version Control & Deployment**  
+✅ Git & GitHub – Source control  
+✅ Netlify / Vercel – Hosting (Planned)  
+✅ Docker – Containerization (Exploring)  
+
+---
+
 ## Website Features  
 
 📌 **About Me** – My background, skills & journey into IT  
 📌 **Skills** – Technologies & programming languages I’m proficient in  
-📌 **Projects** – Showcasing projects within IT**  
+📌 **Projects** – Showcasing my projects within IT
 📌 **Experience & Education** – My professional & academic background  
 📌 **Contact** – Get in touch with me  
 📌 **Company Page** – Details about **Rappich Consulting AB** and its services in **HR & IT**  
