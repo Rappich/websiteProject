@@ -6,7 +6,7 @@ Welcome to my personal Resume and Company website! My name is **Fredrik Rappich*
 
 ## Learning Journey
 
-I am starting by building this website using **HTML**, **CSS**, and **JavaScript** to gain a solid foundation in front-end web development. Once I have familiarized myself with these technologies, I plan to recreate the project using **React** and **Node.js** to deepen my understanding of modern web development frameworks.
+I am starting by building this website using **HTML**, **CSS**, and **JavaScript** to gain a solid foundation in front-end web development. Once I have familiarized myself with these technologies, I plan to recreate the project using **React**, **Node.js**, **Tailwind** & **Typescript** to deepen my understanding of modern web development frameworks.
 
 ## Purpose
 
