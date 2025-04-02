@@ -2,65 +2,65 @@
 
 ## 1. **Structure the Website**
 - **Create Home Section (Hero)**
-  - [ ] Update hero section to introduce yourself with your name, title, and short tagline (e.g., "Web Developer | Problem Solver")
-  - [ ] Include CTA button to view resume or contact information
+  - [x] Update hero section to introduce yourself with your name, title, and short tagline (e.g., "Web Developer | Problem Solver")
+  - [x] Include CTA button to view resume or contact information
 - **Create About Me Section**
-  - [ ] Write a short biography with your background and professional expertise
-  - [ ] Highlight your key skills or career goals
+  - [x] Write a short biography with your background and professional expertise
+  - [x] Highlight your key skills or career goals
 - **Create Skills Section**
-  - [ ] List your technical skills (e.g., programming languages, tools, frameworks)
-  - [ ] Use progress bars or icons to show your proficiency
+  - [x] List your technical skills (e.g., programming languages, tools, frameworks)
+  - [x] Use progress bars or icons to show your proficiency
 - **Create Projects Section**
-  - [ ] List key projects from GitHub or personal work
-  - [ ] Include links to repositories or live demos
+  - [x] List key projects from GitHub or personal work
+  - [x] Include links to repositories or live demos
   - [ ] Add short descriptions and technologies used
-- [ ] **Create Experience Section**
-  - [ ] Add your previous job roles, including company names and durations
-  - [ ] Provide a brief description of your responsibilities and achievements
-- [ ] **Create Education Section**
+- [x] **Create Experience Section**
+  - [x] Add your previous job roles, including company names and durations
+  - [x] Provide a brief description of your responsibilities and achievements
+- [x] **Create Education Section**
   - [ ] List your educational background (degrees, institutions, years)
-- [ ] **Create Contact Section**
-  - [ ] Add a contact form (name, email, message)
-  - [ ] Include social media or LinkedIn links for alternative contact methods
+- [x] **Create Contact Section**
+  - [x] Add a contact form (name, email, message)
+  - [x] Include social media or LinkedIn links for alternative contact methods
 
 ## 2. **Revamp Navigation and Pages**
 - **Update Header/Nav Bar**
-  - [ ] Link to: Home, Resume, Projects, Contact
+  - [x] Link to: Home, Resume, Projects, Contact
 - **Home Page**
-  - [ ] Include an intro message with your profession and CTA to resume
+  - [x] Include an intro message with your profession and CTA to resume
 - **Resume Page**
-  - [ ] Showcase detailed resume info (experience, skills, education, projects)
+  - [x] Showcase detailed resume info (experience, skills, education, projects)
 - **Projects Page**
-  - [ ] Include a list of GitHub projects or other notable work
+  - [x] Include a list of GitHub projects or other notable work
 - **Contact Page**
-  - [ ] Include a contact form or direct email link (and/or social media links)
+  - [x] Include a contact form or direct email link (and/or social media links)
 
 ## 3. **Design and Layout Adjustments**
 - **Hero Section Update**
-  - [ ] Update with a clean, professional intro (name, role, tagline)
-  - [ ] Design an appropriate background image or color scheme
+  - [x] Update with a clean, professional intro (name, role, tagline)
+  - [x] Design an appropriate background image or color scheme
 - **Skills Section**
-  - [ ] Use icons or progress bars to display technical skills
+  - [x] Use icons or progress bars to display technical skills
 - **Project Section**
-  - [ ] Add project images or screenshots where applicable
-  - [ ] Include GitHub links or live demo URLs for each project
+  - [x] Add project images or screenshots where applicable
+  - [x] Include GitHub links or live demo URLs for each project
 - **Footer Update**
-  - [ ] Simplify footer with essential contact info (email, LinkedIn, GitHub)
-  - [ ] Add copyright notice and any other necessary legal links
+  - [x] Simplify footer with essential contact info (email, LinkedIn, GitHub)
+  - [x] Add copyright notice and any other necessary legal links
 
 ## 4. **Content Creation**
 - **Home Page Content**
-  - [ ] Write a concise intro (name, profession, and CTA)
+  - [x] Write a concise intro (name, profession, and CTA)
 - **About Me Content**
-  - [ ] Craft a bio that describes your background, skills, and career goals
+  - [x] Craft a bio that describes your background, skills, and career goals
 - **Experience Content**
-  - [ ] Write descriptions of past roles and highlight key achievements
+  - [x] Write descriptions of past roles and highlight key achievements
 - **Education Content**
-  - [ ] Summarize your academic qualifications (degrees, institutions, etc.)
+  - [x] Summarize your academic qualifications (degrees, institutions, etc.)
 - **Projects Content**
-  - [ ] Write detailed descriptions for each project (technologies used, outcomes, etc.)
+  - [x] Write detailed descriptions for each project (technologies used, outcomes, etc.)
 - **Contact Section Content**
-  - [ ] Write an introductory paragraph encouraging visitors to contact you
+  - [x] Write an introductory paragraph encouraging visitors to contact you
 
 ## 5. **SEO & Optimization**
 - **Meta Tags & Descriptions**
@@ -81,9 +81,9 @@
 
 ## 7. **GitHub and Social Links**
 - **GitHub Link**
-  - [ ] Add GitHub link to footer and relevant project sections
+  - [x] Add GitHub link to footer and relevant project sections
 - **LinkedIn Profile**
-  - [ ] Add LinkedIn profile link to footer or header
+  - [x] Add LinkedIn profile link to footer or header
 - **Other Social Links**
   - [ ] Add any other professional social media links (Twitter, StackOverflow, etc.)
 
