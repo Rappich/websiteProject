@@ -1,4 +1,4 @@
-# Website Project - Work in Progress 🚀  
+# Website Project - Work in Progress  
 
 ## Overview  
 
