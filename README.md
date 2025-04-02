@@ -17,7 +17,6 @@ This project serves as both:
 - Develop practical skills in **HTML, CSS, JavaScript, React, Node.js, Tailwind CSS, and TypeScript**  
 - Learn how to build, optimize, and deploy websites  
 - Establish a **professional online presence**  
-- Showcase my **IoT, backend, and C/C++ projects**  
 
 ---
 
@@ -25,7 +24,7 @@ This project serves as both:
 
 📌 **About Me** – My background, skills & journey into IT  
 📌 **Skills** – Technologies & programming languages I’m proficient in  
-📌 **Projects** – Showcasing **IoT, backend, and C/C++ projects**  
+📌 **Projects** – Showcasing projects within IT**  
 📌 **Experience & Education** – My professional & academic background  
 📌 **Contact** – Get in touch with me  
 📌 **Company Page** – Details about **Rappich Consulting AB** and its services in **HR & IT**  
