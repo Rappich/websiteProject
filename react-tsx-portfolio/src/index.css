@@ -3,16 +3,32 @@
 @tailwind utilities;
 
 @layer base {
-    html {
-        scroll-behavior: smooth;
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-poppins text-text-primary;
+  }
+
+  ul,
+  ol {
+    @apply ml-4;
+  }
+}
+
+@layer utilities {
+  @keyframes loading {
+    0% {
+      transform: translate(-100%);
     }
 
-    body {
-        @apply font-poppins text-text-primary;
+    100% {
+      transform: translate(250%);
     }
+  }
 
-    ul,
-    ol {
-        @apply ml-4;
-    }
+  .animate-loading-bar {
+    animation: loading 2s ease infinite;
+  }
 }
