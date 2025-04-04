@@ -1,24 +1,25 @@
-import './App.css'
-import "./index.css";
+import './App.css';
+import './index.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import { LoadingScreen } from './components/LoadingScreen';
+import { Navbar } from './components/Navbar';
 import { useState } from 'react';
 
 function App() {
   const [isLoaded, setIsLoading] = useState(false);
 
   return (
-    <>
-      {!isLoaded && <LoadingScreen onComplete={() => setIsLoading(true)} />}{" "}
+    <Router>
+      {!isLoaded && <LoadingScreen onComplete={() => setIsLoading(true)} />}
       <div
-        className={`min-h-screen transition-opacity duration-700 ${isLoaded ? "opacity-100" : "opacity-0"
-          } bg-white text-gray-100`}>
-
-
+        className={`min-h-screen transition-opacity duration-700 ${isLoaded ? 'opacity-100' : 'opacity-0'
+          } bg-white text-gray-500`}
+      >
+        {isLoaded && <Navbar />}
       </div>
-
-    </>
-  )
+    </Router>
+  );
 }
 
-export default App
+export default App;
