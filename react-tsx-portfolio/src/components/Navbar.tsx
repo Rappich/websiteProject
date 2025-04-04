@@ -4,14 +4,30 @@ import clsx from 'clsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
-/// Navbar component
+/**
+ * Navbar component that provides a responsive navigation bar for the website.
+ *
+ * Features:
+ * - Includes both desktop and mobile navigation bars.
+ * - Desktop navigation is displayed on larger screens (xl and above).
+ * - Mobile navigation includes a hamburger menu for smaller screens.
+ * - Navigation links are dynamically rendered from the `navLinksData` array.
+ * - Smooth transitions and hover effects are applied to navigation links.
+ *
+ * @component
+ * @returns {JSX.Element} The Navbar component.
+ */
 export const Navbar: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+    /**
+     * Toggles the state of the mobile menu (open/closed).
+     */
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
 
+    // Array containing navigation link data
     const navLinksData = [
         { href: '#about', text: 'About', internal: true },
         { href: '#experience', text: 'Experience', internal: true },
@@ -20,8 +36,12 @@ export const Navbar: React.FC = () => {
         { href: '/company', text: 'My Company', internal: false },
     ];
 
-    // Function to render the navigation links
-    // This function takes a boolean parameter isMobile to determine if the links are being rendered for mobile or desktop view
+    /**
+     * Renders navigation links.
+     *
+     * @param {boolean} isMobile - Determines if the links are being rendered for mobile view.
+     * @returns {JSX.Element[]} A list of navigation links.
+     */
     const renderLinks = (isMobile: boolean = false) =>
         navLinksData.map((link) => (
             <li key={link.text}>
@@ -47,16 +67,22 @@ export const Navbar: React.FC = () => {
 
     return (
         <>
-
-            <nav id="desktop-nav" className="hidden xl:flex justify-around items-center h-17vh max-w-screen-xl mx-auto">
+            {/* Desktop Navigation Bar */}
+            <nav
+                id="desktop-nav"
+                className="hidden xl:flex justify-around items-center h-17vh max-w-screen-xl mx-auto"
+            >
                 <div className="logo text-xl xl:text-3xl cursor-default">Fredrik Rappich</div>
                 <ul className="nav-links flex flex-row gap-8 list-none m-0 p-0">
                     {renderLinks(false)}
                 </ul>
             </nav>
 
-
-            <nav id="hamburger-nav" className="flex xl:hidden justify-between items-center h-17vh px-[10%]">
+            {/* Mobile Navigation Bar */}
+            <nav
+                id="hamburger-nav"
+                className="flex xl:hidden justify-between items-center h-17vh px-[10%]"
+            >
                 <div className="logo text-xl cursor-default">Fredrik Rappich</div>
                 <div className="hamburger-menu relative inline-block">
                     <div
@@ -66,13 +92,11 @@ export const Navbar: React.FC = () => {
                         role="button"
                         aria-expanded={isMenuOpen}
                     >
-
                         <FontAwesomeIcon
                             icon={isMenuOpen ? faTimes : faBars}
                             className="text-black text-2xl transition-all duration-300 ease-in-out"
                         />
                     </div>
-
                     <div
                         className={clsx(
                             'menu-links absolute top-full right-0 bg-white w-fit max-h-0 overflow-hidden transition-all duration-300 ease-in-out shadow-md z-20',

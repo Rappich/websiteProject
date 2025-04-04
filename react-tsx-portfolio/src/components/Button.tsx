@@ -1,21 +1,45 @@
 import React from 'react';
 import clsx from 'clsx';
 
-// Define expected properties for the button
-// This interface defines the expected properties for the Button component
-// It includes variant, onClick, children, className, type, href, target, and rel
-// variant: 'primary' | 'secondary' indicates the button style
+/**
+ * Props for the Button component.
+ * 
+ * @typedef {Object} ButtonProps
+ * @property {'primary' | 'secondary'} variant - Determines the button style.
+ * @property {(event: React.MouseEvent<HTMLButtonElement>) => void} [onClick] - Optional click handler.
+ * @property {React.ReactNode} children - Content inside the button.
+ * @property {string} [className] - Optional additional CSS classes.
+ * @property {'button' | 'submit' | 'reset'} [type='button'] - Button type, defaults to 'button'.
+ * @property {string} [href] - If provided, renders the button as a link.
+ * @property {string} [target] - Specifies where to open the link.
+ * @property {string} [rel] - Specifies the relationship between the current document and the link.
+ */
 interface ButtonProps {
     variant: 'primary' | 'secondary';
-    onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void; // Optional click handler function
-    children: React.ReactNode; // Content inside the button
-    className?: string; // Optional additional classes
-    type?: 'button' | 'submit' | 'reset'; // Default is 'button'
-    href?: string; // For making the button act like a link
-    target?: string; // For link target (_blank, etc.)
-    rel?: string; // For link rel (noopener noreferrer)
+    onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+    children: React.ReactNode;
+    className?: string;
+    type?: 'button' | 'submit' | 'reset';
+    href?: string;
+    target?: string;
+    rel?: string;
 }
 
+/**
+ * Button component.
+ * 
+ * A reusable button component that supports two variants: 'primary' and 'secondary'.
+ * It can render as either a `<button>` or an `<a>` tag depending on the presence of the `href` prop.
+ * 
+ * Features:
+ * - Supports custom styles via the `className` prop.
+ * - Includes hover effects and smooth transitions.
+ * - Adds security attributes for external links when `target="_blank"` is used.
+ * 
+ * @component
+ * @param {ButtonProps} props - The props for the Button component.
+ * @returns {JSX.Element} The rendered Button component.
+ */
 const Button: React.FC<ButtonProps> = ({
     variant,
     onClick,
@@ -26,33 +50,35 @@ const Button: React.FC<ButtonProps> = ({
     target,
     rel,
 }) => {
-    // Base styles common to all buttons
-    const baseStyles = 'font-semibold transition-all duration-300 ease-in-out p-4 w-32 rounded-full border-[0.1rem]';
-    // Variant specific styles (approximated from your CSS logic)
-    const variantStyles = variant === 'primary' // btn-color-1
-        ? 'bg-text-dark text-white border-text-dark hover:bg-black hover:border-black'
-        : // btn-color-2 (secondary)
-        'bg-transparent text-text-dark border-text-dark hover:bg-text-dark hover:text-white hover:border-text-dark'; // Ensure hover border matches bg
+    // Base styles applied to all buttons
+    const baseStyles =
+        'font-semibold transition-all duration-300 ease-in-out p-4 w-32 rounded-full border-[0.1rem]';
 
-    // Combine classes using clsx
+    // Styles applied based on the `variant` prop
+    const variantStyles =
+        variant === 'primary'
+            ? 'bg-text-dark text-white border-text-dark hover:bg-black hover:border-black' // Primary button styles
+            : 'bg-transparent text-text-dark border-text-dark hover:bg-text-dark hover:text-white hover:border-text-dark'; // Secondary button styles
+
+    // Combine base styles, variant styles, and any additional classes
     const combinedClassName = clsx(baseStyles, variantStyles, className);
 
-    // If href is provided, render an anchor tag styled as a button
+    // Render an anchor tag if `href` is provided
     if (href) {
         return (
             <a
                 href={href}
                 className={combinedClassName}
                 target={target}
-                rel={rel || (target === '_blank' ? 'noopener noreferrer' : undefined)}
-                onClick={onClick as any}
+                rel={rel || (target === '_blank' ? 'noopener noreferrer' : undefined)} // Add security attributes for external links
+                onClick={onClick as any} // Cast onClick to any for anchor compatibility
             >
                 {children}
             </a>
         );
     }
 
-    // Otherwise, render a button tag
+    // Render a button tag if `href` is not provided
     return (
         <button
             type={type}
