@@ -6,6 +6,8 @@ import { LoadingScreen } from './components/LoadingScreen';
 import { Navbar } from './components/Navbar';
 import { useState } from 'react';
 import HeroSection from './sections/HeroSection';
+import AboutSection from './sections/AboutSection';
+
 
 function App() {
   const [isLoaded, setIsLoading] = useState(false);
@@ -19,6 +21,7 @@ function App() {
       >
         {isLoaded && <Navbar />}
         {isLoaded && <HeroSection />}
+        {isLoaded && <AboutSection />}
       </div>
     </Router>
   );
