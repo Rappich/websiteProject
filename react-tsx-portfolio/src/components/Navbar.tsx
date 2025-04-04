@@ -4,10 +4,7 @@ import clsx from 'clsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
-// Navbar component
-// This component renders a responsive navigation bar with links to different sections of the website
-// It uses FontAwesome icons for the hamburger menu and includes a logo
-// The navigation links are conditionally rendered based on the screen size (desktop or mobile)
+/// Navbar component
 export const Navbar: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -25,7 +22,6 @@ export const Navbar: React.FC = () => {
 
     // Function to render the navigation links
     // This function takes a boolean parameter isMobile to determine if the links are being rendered for mobile or desktop view
-    // It maps over the navLinksData array and returns a list item for each link
     const renderLinks = (isMobile: boolean = false) =>
         navLinksData.map((link) => (
             <li key={link.text}>
@@ -51,22 +47,16 @@ export const Navbar: React.FC = () => {
 
     return (
         <>
-            {/* Desktop Navigation */}
-            {/* This navigation bar is hidden on mobile devices and displayed on larger screens */}
-            <nav id="desktop-nav" className="hidden xl:flex justify-around items-center h-17vh">
+
+            <nav id="desktop-nav" className="hidden xl:flex justify-around items-center h-17vh max-w-screen-xl mx-auto">
                 <div className="logo text-xl xl:text-3xl cursor-default">Fredrik Rappich</div>
                 <ul className="nav-links flex flex-row gap-8 list-none m-0 p-0">
                     {renderLinks(false)}
                 </ul>
             </nav>
 
-            {/* Mobile Navigation */}
-            {/* This navigation bar is displayed on mobile devices and hidden on larger screens */}
-            {/* It includes a hamburger menu icon that toggles the visibility of the links */}
-            {/* The links are displayed in a vertical list when the menu is open */}
-            {/* The menu is hidden by default and expands when the hamburger icon is clicked */}
-            {/* The menu closes when a link is clicked */}
-            <nav id="hamburger-nav" className="flex xl:hidden justify-between items-center h-17vh px-[5%]">
+
+            <nav id="hamburger-nav" className="flex xl:hidden justify-between items-center h-17vh px-[10%]">
                 <div className="logo text-xl cursor-default">Fredrik Rappich</div>
                 <div className="hamburger-menu relative inline-block">
                     <div

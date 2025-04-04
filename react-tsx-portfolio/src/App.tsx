@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { LoadingScreen } from './components/LoadingScreen';
 import { Navbar } from './components/Navbar';
 import { useState } from 'react';
+import HeroSection from './sections/HeroSection';
 
 function App() {
   const [isLoaded, setIsLoading] = useState(false);
@@ -17,6 +18,7 @@ function App() {
           } bg-white text-gray-500`}
       >
         {isLoaded && <Navbar />}
+        {isLoaded && <HeroSection />}
       </div>
     </Router>
   );
