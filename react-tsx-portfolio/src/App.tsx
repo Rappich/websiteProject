@@ -7,6 +7,7 @@ import { Navbar } from './components/Navbar';
 import { useState } from 'react';
 import HeroSection from './sections/HeroSection';
 import AboutSection from './sections/AboutSection';
+import ExperienceSection from './sections/ExperienceSection';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         {isLoaded && <Navbar />}
         {isLoaded && <HeroSection />}
         {isLoaded && <AboutSection />}
+        {isLoaded && <ExperienceSection />}
       </div>
     </Router>
   );
