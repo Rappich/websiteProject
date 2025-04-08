@@ -1,42 +1,38 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Timeline, { TimelineEntry } from '../components/Timeline';
 import { faArrowDown, faTimes } from '@fortawesome/free-solid-svg-icons';
-import { NavigationArrow, CloseButton } from '../components/Navigation'; // Adjust path if needed
+import { NavigationArrow, CloseButton } from '../components/Navigation';
 import { useInView } from 'react-intersection-observer';
+import SkillProgressBar from '../components/SkillProgressBar';
 
-
-const frontendSkills = [
-    { name: 'HTML', level: 'Basic' },
-    { name: 'CSS', level: 'Basic' },
-    { name: 'JavaScript', level: 'Basic' },
-    { name: 'React', level: 'Learning' },
-    { name: 'Tailwind CSS', level: 'Learning' },
-    { name: 'Typescript', level: 'Learning' },
-];
-
-const backendSkills = [
-    { name: 'C', level: 'Intermediate' },
-    { name: 'C++', level: 'Intermediate' },
-    { name: 'NoSQL', level: 'Basic' },
-    { name: 'SQL', level: 'Basic' },
-    { name: 'Git', level: 'Intermediate' },
-    { name: 'Node.js', level: 'Learning' },
-];
-
-interface SkillItemProps {
+/* import { Switch } from "@material-tailwind/react";
+ 
+export function SwitchLabel() {
+  return <Switch label="Automatic Update" />;
+} */
+interface Skill {
     name: string;
-    level: string;
+    level: number;
 }
 
-const SkillItem: React.FC<SkillItemProps> = ({ name, level }) => (
-    <article className="flex w-30 justify-start sm:justify-around gap-2">
-        <img src="/assets/checkmark.png" alt="" className="icon h-8 cursor-default" />
-        <div>
-            <h3 className="font-semibold">{name}</h3>
-            <p className="text-text-primary">{level}</p>
-        </div>
-    </article>
-);
+const frontendSkills: Skill[] = [
+    { name: 'HTML', level: 5 },
+    { name: 'CSS', level: 5 },
+    { name: 'JavaScript', level: 5 },
+    { name: 'React', level: 3 },
+    { name: 'Tailwind CSS', level: 4 },
+    { name: 'Typescript', level: 3 },
+];
+
+const backendSkills: Skill[] = [
+    { name: 'C', level: 7 },
+    { name: 'C++', level: 7 },
+    { name: 'NoSQL', level: 5 },
+    { name: 'SQL', level: 5 },
+    { name: 'Git', level: 7 },
+    { name: 'Node.js', level: 7 },
+];
+
 
 const ExperienceSection: React.FC = () => {
     const [openSectionId, setOpenSectionId] = useState<string | null>(null);
@@ -55,7 +51,6 @@ const ExperienceSection: React.FC = () => {
     };
 
     useEffect(() => {
-
         if (openSectionId) {
             const timer = setTimeout(() => {
                 const element = document.getElementById(openSectionId);
@@ -66,7 +61,6 @@ const ExperienceSection: React.FC = () => {
             return () => clearTimeout(timer);
         }
     }, [openSectionId]);
-
 
     const workExperienceData: TimelineEntry[] = [
 
@@ -82,7 +76,6 @@ const ExperienceSection: React.FC = () => {
         { id: 'ed1', imageSrc: '/assets/education.png', title: 'System Development', subtitle: 'Chas Academy', duration: '2024 - Present', description: 'Lorum ipsum', listItems: [], position: 'left' },
         { id: 'ed2', imageSrc: '/assets/education.png', title: 'B.Sc. Psychology', subtitle: 'Örebro Universitet', duration: '2011 - 2016', description: 'Lorum ipsum', listItems: [], position: 'right' },
     ];
-
     const showScrollArrow = isSectionInView && openSectionId === null;
     const showCloseButton = openSectionId !== null;
 
@@ -90,27 +83,31 @@ const ExperienceSection: React.FC = () => {
         <section
             id="experience"
             ref={sectionInViewRef}
-            className="relative pt-[4vh] px-[5%] xl:px-10 min-h-fit xl:h-94vh box-border max-w-screen-xl mx-auto pb-20"
+            className="relative pt-[4vh] px-[5%] xl:px-10 min-h-screen box-border max-w-screen-xl mx-auto pb-20"
         >
             <p className="section__text__p1 text-center font-semibold">Explore My</p>
-            <h1 className="title text-3xl xl:text-5xl text-center font-bold ">Experience</h1>
+            <h1 className="title text-3xl xl:text-5xl text-center font-bold ">Experience & Skills</h1>
 
             <div className="experience-details-container flex justify-center flex-col mt-8">
                 <div className="about-containers flex flex-wrap xl:flex-nowrap gap-8 mb-8 mt-0 justify-center">
 
-                    <div className="details-container-with-btn relative p-6 flex-1 bg-white rounded-2xl border-[0.1rem] border-border-light text-center min-h-[300px] xl:h-34vh">
-                        <h2 className="experience-sub-title text-lg md:text-xl font-semibold text-text-primary mb-8 xl:mb-24">
+
+                    <div className="details-container-with-btn relative p-6 flex-1 bg-white rounded-2xl border-[0.1rem] border-border-light text-center min-h-[400px]">
+                        <h2 className="experience-sub-title text-lg md:text-xl font-semibold text-text-primary mb-8"> {/* Removed xl:mb-24 */}
                             Frontend Development
                         </h2>
-                        <div className="article-container flex flex-row flex-wrap justify-center gap-10 text-left mb-28">
-
+                        <div className="article-container flex flex-col space-y-4 mb-28 px-4 md:px-8"> {/* Stack vertically */}
                             {frontendSkills.map((skill) => (
-                                <SkillItem key={skill.name} name={skill.name} level={skill.level} />
+                                <SkillProgressBar
+                                    key={skill.name}
+                                    name={skill.name}
+                                    level={skill.level}
+                                />
                             ))}
                         </div>
-                        <div className="expand-button-container absolute w-full bottom-0 left-0 text-center px-6">
+                        <div className="expand-button-container absolute w-full bottom-0 left-0 text-center px-6 pb-6"> {/* Added padding bottom */}
                             <button
-                                className="expand-btn font-extrabold transition-all duration-300 ease-in-out w-full xl:w-4/5 mb-8 xl:mr-12 h-24 rounded-2xl text-white border border-white/30 shadow-md hover:opacity-80 hover:scale-105 focus:outline-none focus:ring-2 active:scale-95 active:shadow-inner bg-cover bg-no-repeat bg-center"
+                                className="expand-btn font-extrabold transition-all duration-300 ease-in-out w-full xl:w-4/5 h-24 rounded-2xl text-white border border-white/30 shadow-md hover:opacity-80 hover:scale-105 focus:outline-none focus:ring-2 active:scale-95 active:shadow-inner bg-cover bg-no-repeat bg-center"
                                 style={{ backgroundImage: `url(/assets/background2.png)` }}
                                 onClick={() => handleExpandClick('expanded-timeline')}
                             >
@@ -119,20 +116,23 @@ const ExperienceSection: React.FC = () => {
                         </div>
                     </div>
 
-                    <div className="details-container-with-btn relative p-6 flex-1 bg-white rounded-2xl border-[0.1rem] border-border-light text-center min-h-[300px] xl:h-34vh">
-                        <h2 className="experience-sub-title text-lg md:text-xl font-semibold text-text-primary mb-8 xl:mb-24">
-                            Backend Development
+
+                    <div className="details-container-with-btn relative p-6 flex-1 bg-white rounded-2xl border-[0.1rem] border-border-light text-center min-h-[400px]">
+                        <h2 className="experience-sub-title text-lg md:text-xl font-semibold text-text-primary mb-8"> {/* Removed xl:mb-24 */}
+                            Backend Development & Tools
                         </h2>
-
-                        <div className="article-container flex flex-row flex-wrap justify-center gap-10 text-left mb-28">
-
+                        <div className="article-container flex flex-col space-y-4 mb-28 px-4 md:px-8"> {/* Stack vertically */}
                             {backendSkills.map((skill) => (
-                                <SkillItem key={skill.name} name={skill.name} level={skill.level} />
+                                <SkillProgressBar
+                                    key={skill.name}
+                                    name={skill.name}
+                                    level={skill.level}
+                                />
                             ))}
                         </div>
-                        <div className="expand-button-container absolute w-full bottom-0 left-0 text-center px-6">
+                        <div className="expand-button-container absolute w-full bottom-0 left-0 text-center px-6 pb-6"> {/* Added padding bottom */}
                             <button
-                                className="expand-btn font-extrabold transition-all duration-300 ease-in-out w-full xl:w-4/5 mb-8 xl:mr-12 h-24 rounded-2xl text-white border border-white/30 shadow-md hover:opacity-80 hover:scale-105 focus:outline-none focus:ring-2 active:scale-95 active:shadow-inner bg-cover bg-no-repeat bg-center"
+                                className="expand-btn font-extrabold transition-all duration-300 ease-in-out w-full xl:w-4/5 h-24 rounded-2xl text-white border border-white/30 shadow-md hover:opacity-80 hover:scale-105 focus:outline-none focus:ring-2 active:scale-95 active:shadow-inner bg-cover bg-no-repeat bg-center"
                                 style={{ backgroundImage: `url(/assets/background3.png)` }}
                                 onClick={() => handleExpandClick('expanded-timeline-2')}
                             >
@@ -159,7 +159,6 @@ const ExperienceSection: React.FC = () => {
                     onClose={handleCloseTimeline}
                 />
             )}
-
 
             <NavigationArrow
                 targetId="projects"
