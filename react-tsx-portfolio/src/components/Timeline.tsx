@@ -22,7 +22,6 @@ interface TimelineProps {
 }
 
 const Timeline: React.FC<TimelineProps> = ({ id, title, data, onClose }) => {
-    const timelineHorizontalOffset = '20px';
 
     return (
         <section id={id} className="expandable-section relative pt-[4vh] px-[5%] xl:px-40 box-border">
@@ -34,7 +33,7 @@ const Timeline: React.FC<TimelineProps> = ({ id, title, data, onClose }) => {
                     className="absolute w-[3px] bg-text-dark top-0 bottom-8 left-1/2 -translate-x-1/2 hidden xl:block"
                 ></div>
 
-                {data.map((entry, index) => (
+                {data.map((entry) => (
                     <div key={entry.id} className="relative">
                         <div
                             className={clsx(

@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '../components/Button';
-import profilePic from '../assets/cvbild.jpg';
-import resumePdf from '../assets/resume-example.pdf';
+import profilePic from '/assets/cvbild.jpg';
+import resumePdf from '/assets/resume-example.pdf';
 
 // Import FontAwesome for social icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

@@ -1,8 +1,8 @@
 import React from 'react';
 // Import assets
-import aboutPic from '../assets/MC4.jpg';
-import experienceIcon from '../assets/experience.png';
-import educationIcon from '../assets/education.png';
+import aboutPic from '/assets/MC4.jpg';
+import experienceIcon from '/assets/experience.png';
+import educationIcon from '/assets/education.png';
 // Import FontAwesome if using for arrow
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
@@ -79,11 +79,10 @@ const AboutSection: React.FC = () => {
             {/* Use Font Awesome Icon */}
             <FontAwesomeIcon
                 icon={faArrowDown}
-                className="arrow hidden xl:block absolute right-1 bottom-16 cursor-pointer text-3xl text-black hover:text-gray-500"
+                className="arrow hidden xl:block absolute right-12 bottom-16 cursor-pointer text-3xl text-black hover:text-gray-500"
                 onClick={handleScrollToExperience}
                 aria-label="Go to experience section"
             />
-            {/* Or use img if preferred: <img src="..." className="icon arrow ..." /> */}
         </section>
     );
 };
