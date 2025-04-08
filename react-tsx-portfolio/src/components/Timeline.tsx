@@ -1,7 +1,5 @@
 import React from 'react';
 import clsx from 'clsx';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 export interface TimelineEntry {
     id: string | number;
@@ -74,13 +72,6 @@ const Timeline: React.FC<TimelineProps> = ({ id, title, data, onClose }) => {
                         </div>
                     </div>
                 ))}
-
-                <FontAwesomeIcon
-                    icon={faTimes}
-                    className="icon arrow close-btn absolute bottom-16 right-1 xl:-right-20 cursor-pointer text-3xl text-black hover:text-gray-500 z-10"
-                    onClick={onClose}
-                    aria-label={`Close ${title}`}
-                />
             </div>
         </section>
     );
