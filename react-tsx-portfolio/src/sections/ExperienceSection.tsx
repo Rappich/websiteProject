@@ -31,6 +31,7 @@ const backendSkills: Skill[] = [
     { name: 'SQL', level: 5 },
     { name: 'Git', level: 7 },
     { name: 'Node.js', level: 7 },
+    { name: 'Embedded Systems', level: 5 },
 ];
 
 
