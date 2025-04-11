@@ -2,21 +2,6 @@ import React from 'react';
 import { NavigationArrow } from '../components/Navigation';
 import { useInView } from 'react-intersection-observer';
 
-
-/**
- * The `AboutSection` component represents the "About Me" section of a portfolio website.
- * It includes a profile picture, professional background, education details, and a brief description.
- * The section is responsive and adapts its layout for different screen sizes.
- *
- * Features:
- * - Displays a profile picture with a rounded design.
- * - Provides a summary of professional experience and education in styled containers.
- * - Includes a descriptive text about the individual's career transition and skills.
- * - Contains a smooth scroll functionality to navigate to the "Experience" section using the NavigationArrow component. // Updated comment
- *
- * @component
- * @returns {JSX.Element} 
- */
 const AboutSection: React.FC = () => {
 
     const { ref, inView } = useInView({
@@ -50,6 +35,7 @@ const AboutSection: React.FC = () => {
                             <img src="/assets/experience.png" alt="Experience icon" className="icon h-8 mx-auto" />
                             <h3 className='font-semibold text-lg my-2'>Professional Background</h3>
                             <p className='text-text-primary'>9+ years <br /> Strategic HR and process optimization</p>
+
                         </div>
                         <div className="details-container p-6 flex-1 bg-white rounded-2xl border-[0.1rem] border-border-light text-center">
                             <img src="/assets/education.png" alt="Education icon" className="icon h-8 mx-auto" />

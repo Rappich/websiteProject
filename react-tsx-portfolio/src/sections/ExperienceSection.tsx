@@ -3,13 +3,10 @@ import Timeline, { TimelineEntry } from '../components/Timeline';
 import { faArrowDown, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { NavigationArrow, CloseButton } from '../components/Navigation';
 import { useInView } from 'react-intersection-observer';
-import SkillProgressBar from '../components/SkillProgressBar';
+import ProgressBar from '../components/ProgressBar';
+import SwitchToggle from '../components/SwitchToggle';
 
-/* import { Switch } from "@material-tailwind/react";
- 
-export function SwitchLabel() {
-  return <Switch label="Automatic Update" />;
-} */
+
 interface Skill {
     name: string;
     level: number;
@@ -94,72 +91,74 @@ const ExperienceSection: React.FC = () => {
 
 
                     <div className="details-container-with-btn relative p-6 flex-1 bg-white rounded-2xl border-[0.1rem] border-border-light text-center min-h-[400px]">
-                        <h2 className="experience-sub-title text-lg md:text-xl font-semibold text-text-primary mb-8"> {/* Removed xl:mb-24 */}
+                        <h2 className="experience-sub-title text-lg md:text-xl font-semibold text-text-primary mb-8">
                             Frontend Development
                         </h2>
-                        <div className="article-container flex flex-col space-y-4 mb-28 px-4 md:px-8"> {/* Stack vertically */}
+                        <div className="flex flex-col items-center justify-center space-y-4 mb-28 px-4 md:px-8">
                             {frontendSkills.map((skill) => (
-                                <SkillProgressBar
+                                <ProgressBar
                                     key={skill.name}
                                     name={skill.name}
                                     level={skill.level}
                                 />
                             ))}
                         </div>
-                        <div className="expand-button-container absolute w-full bottom-0 left-0 text-center px-6 pb-6"> {/* Added padding bottom */}
-                            <button
-                                className="expand-btn font-extrabold transition-all duration-300 ease-in-out w-full xl:w-4/5 h-24 rounded-2xl text-white border border-white/30 shadow-md hover:opacity-80 hover:scale-105 focus:outline-none focus:ring-2 active:scale-95 active:shadow-inner bg-cover bg-no-repeat bg-center"
-                                style={{ backgroundImage: `url(/assets/background2.png)` }}
-                                onClick={() => handleExpandClick('expanded-timeline')}
-                            >
-                                Press to see my Work Experience
-                            </button>
+                        <div className="switch-container w-full flex justify-center items-center px-6 pb-6 mt-auto">
+                            <SwitchToggle
+                                id="work-experience-toggle"
+                                labelText="Show Work Experience"
+                                checked={openSectionId === 'expanded-timeline'}
+                                onChange={() => handleExpandClick('expanded-timeline')}
+                            />
                         </div>
                     </div>
 
 
                     <div className="details-container-with-btn relative p-6 flex-1 bg-white rounded-2xl border-[0.1rem] border-border-light text-center min-h-[400px]">
-                        <h2 className="experience-sub-title text-lg md:text-xl font-semibold text-text-primary mb-8"> {/* Removed xl:mb-24 */}
+                        <h2 className="experience-sub-title text-lg md:text-xl font-semibold text-text-primary mb-8">
                             Backend Development & Tools
                         </h2>
-                        <div className="article-container flex flex-col space-y-4 mb-28 px-4 md:px-8"> {/* Stack vertically */}
+                        <div className="flex flex-col items-center justify-center space-y-4 mb-28 px-4 md:px-">
                             {backendSkills.map((skill) => (
-                                <SkillProgressBar
+                                <ProgressBar
                                     key={skill.name}
                                     name={skill.name}
                                     level={skill.level}
                                 />
                             ))}
                         </div>
-                        <div className="expand-button-container absolute w-full bottom-0 left-0 text-center px-6 pb-6"> {/* Added padding bottom */}
-                            <button
-                                className="expand-btn font-extrabold transition-all duration-300 ease-in-out w-full xl:w-4/5 h-24 rounded-2xl text-white border border-white/30 shadow-md hover:opacity-80 hover:scale-105 focus:outline-none focus:ring-2 active:scale-95 active:shadow-inner bg-cover bg-no-repeat bg-center"
-                                style={{ backgroundImage: `url(/assets/background3.png)` }}
-                                onClick={() => handleExpandClick('expanded-timeline-2')}
-                            >
-                                Press to see my Education
-                            </button>
+                        <div className="switch-container w-full flex justify-center items-center px-6 pb-6 mt-auto">
+                            <SwitchToggle
+                                id="education-toggle"
+                                labelText="Show Education"
+                                checked={openSectionId === 'expanded-timeline-2'}
+                                onChange={() => handleExpandClick('expanded-timeline-2')}
+                            />
                         </div>
                     </div>
                 </div>
             </div>
 
-            {openSectionId === 'expanded-timeline' && (
-                <Timeline
-                    id="expanded-timeline"
-                    title="Work Experience"
-                    data={workExperienceData}
-                    onClose={handleCloseTimeline}
-                />
-            )}
-            {openSectionId === 'expanded-timeline-2' && (
-                <Timeline
-                    id="expanded-timeline-2"
-                    title="Education"
-                    data={educationData}
-                    onClose={handleCloseTimeline}
-                />
-            )}
+            {
+                openSectionId === 'expanded-timeline' && (
+                    <Timeline
+                        id="expanded-timeline"
+                        title="Work Experience"
+                        data={workExperienceData}
+                        onClose={handleCloseTimeline}
+                    />
+                )
+            }
+            {
+                openSectionId === 'expanded-timeline-2' && (
+                    <Timeline
+                        id="expanded-timeline-2"
+                        title="Education"
+                        data={educationData}
+                        onClose={handleCloseTimeline}
+                    />
+                )
+            }
 
             <NavigationArrow
                 targetId="projects"

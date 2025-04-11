@@ -2,38 +2,16 @@ import React from 'react';
 import Button from '../components/Button';
 import profilePic from '/assets/cvbild.jpg';
 import resumePdf from '/assets/resume-example.pdf';
-
-// Import FontAwesome for social icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons';
 
-/**
- * HeroSection component.
- * 
- * Displays a hero section with a profile picture, name, title, and action buttons.
- * Includes social media links and supports responsive design for various screen sizes.
- * 
- * Features:
- * - Profile picture with responsive sizing.
- * - Action buttons for downloading a CV and navigating to the contact section.
- * - Social media icons with links to LinkedIn and GitHub.
- * 
- * @component
- * @returns {JSX.Element} The rendered HeroSection component.
- */
 const HeroSection: React.FC = () => {
-    /**
-     * Handles the "Download CV" button click.
-     * Opens the resume PDF in a new browser tab.
-     */
+
     const handleDownloadCv = () => {
         window.open(resumePdf, '_blank');
     };
 
-    /**
-     * Handles the "Contact Info" button click.
-     * Smoothly scrolls to the contact section of the page.
-     */
+
     const handleScrollToContact = () => {
         document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
     };

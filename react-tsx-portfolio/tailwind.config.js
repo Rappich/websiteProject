@@ -2,19 +2,19 @@
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,ts,jsx,tsx}", // Keep your content paths
   ],
   theme: {
-    extend: {
+    extend: { // Keep all your theme extensions
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
       },
       colors: {
-        'text-primary': '#555555', // rgb(85, 85, 85)
-        'text-dark': '#353535',    // rgb(53, 53, 53)
-        'border-light': '#A3A3A3',  // rgb(163, 163, 163)
-        'border-medium': '#B5B5B5', // rgb(181, 181, 181)
-        'bg-light': '#FAFAFA',     // rgb(250, 250, 250)
+        'text-primary': '#555555',
+        'text-dark': '#353535',
+        'border-light': '#A3A3A3',
+        'border-medium': '#B5B5B5',
+        'bg-light': '#FAFAFA',
       },
       height: {
         '17vh': '17vh', '80vh': '80vh', '83vh': '83vh', '94vh': '94vh',
@@ -27,5 +27,7 @@ export default {
       width: { 'fit': 'fit-content', }
     },
   },
-  plugins: [],
+  plugins: [
+    // Add any other Tailwind plugins you might be using here
+  ],
 }
