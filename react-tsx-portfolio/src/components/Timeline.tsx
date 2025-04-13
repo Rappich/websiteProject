@@ -28,7 +28,7 @@ const Timeline: React.FC<TimelineProps> = ({ id, title, data, onClose }) => {
             <div className="timeline relative w-full mt-16 pb-8 flex flex-col gap-[30px] sm:gap-[50px]">
                 <div
                     id="timeline-divider"
-                    className="absolute w-[3px] bg-text-dark top-0 bottom-8 left-1/2 -translate-x-1/2 hidden xl:block"
+                    className="absolute w-[3px] bg-text-dark top-0 bottom-8 left-1/2 xl:px-8-translate-x-1/2 hidden xl:block"
                 ></div>
 
                 {data.map((entry) => (

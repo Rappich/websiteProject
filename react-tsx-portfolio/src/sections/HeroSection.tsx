@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '../components/Button';
 import profilePic from '/assets/cvbild.jpg';
-import resumePdf from '/assets/resume-example.pdf';
+import resumePdf from '/assets/Fredrik_Rappich_CV_0410_ENG.pdf';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons';
 

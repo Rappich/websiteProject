@@ -14,19 +14,19 @@ interface Skill {
 const frontendSkills: Skill[] = [
     { name: 'HTML', level: 5 },
     { name: 'CSS', level: 5 },
-    { name: 'JavaScript', level: 5 },
+    { name: 'JavaScript', level: 3 },
     { name: 'React', level: 3 },
     { name: 'Tailwind CSS', level: 4 },
     { name: 'Typescript', level: 3 },
 ];
 
 const backendSkills: Skill[] = [
-    { name: 'C', level: 7 },
-    { name: 'C++', level: 7 },
-    { name: 'NoSQL', level: 5 },
-    { name: 'SQL', level: 5 },
-    { name: 'Git', level: 7 },
-    { name: 'Node.js', level: 7 },
+    { name: 'C', level: 6 },
+    { name: 'C++', level: 6 },
+    { name: 'NoSQL', level: 2 },
+    { name: 'SQL', level: 3 },
+    { name: 'Git', level: 5 },
+    { name: 'Node.js', level: 2 },
     { name: 'Embedded Systems', level: 5 },
 ];
 
@@ -64,7 +64,7 @@ const ExperienceSection: React.FC = () => {
             className="relative pt-[4vh] px-[5%] xl:px-10 min-h-screen box-border max-w-screen-xl mx-auto pb-20"
         >
             <p className="section__text__p1 text-center font-semibold">Explore My</p>
-            <h1 className="title text-3xl xl:text-5xl text-center font-bold ">Experience & Skills</h1>
+            <h1 className="title text-3xl xl:text-5xl text-center font-bold ">Programing Skills</h1>
 
             <div className="experience-details-container flex justify-center flex-col mt-8">
                 <div className="about-containers flex flex-wrap xl:flex-nowrap gap-8 mb-8 mt-0 justify-center">
@@ -74,7 +74,7 @@ const ExperienceSection: React.FC = () => {
                         <h2 className="experience-sub-title text-lg md:text-xl font-semibold text-text-primary mb-8">
                             Frontend Development
                         </h2>
-                        <div className="flex flex-col items-center justify-center space-y-4 mb-28 px-4 md:px-8">
+                        <div className="flex flex-col items-center justify-center space-y-4 mb-8 px-4 md:px-8">
                             {frontendSkills.map((skill) => (
                                 <ProgressBar
                                     key={skill.name}
@@ -90,7 +90,7 @@ const ExperienceSection: React.FC = () => {
                         <h2 className="experience-sub-title text-lg md:text-xl font-semibold text-text-primary mb-8">
                             Backend Development & Tools
                         </h2>
-                        <div className="flex flex-col items-center justify-center space-y-4 mb-28 px-4 md:px-">
+                        <div className="flex flex-col items-center justify-center space-y-4 mb-8 px-4 md:px-">
                             {backendSkills.map((skill) => (
                                 <ProgressBar
                                     key={skill.name}

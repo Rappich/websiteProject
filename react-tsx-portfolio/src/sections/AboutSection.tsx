@@ -52,53 +52,55 @@ const AboutSection: React.FC = () => {
             <div className="section-container block xl:flex gap-16 xl:h-fit mt-0 xl:mt-8">
 
                 {/* Picture container */}
-                <div className="section__pic-container w-auto h-[46vw] justify-center sm:w-[275px] sm:h-[275px] xl:w-[400px] xl:h-[400px] flex items-center mx-auto my-0 mt-8 xl:mt-0 mb-8 xl:mx-0 xl:my-auto xl:-translate-x-1/5">
+
+                {/* Details container */}
+                <div> <div className="section__pic-container w-auto h-[46vw] justify-center sm:w-[275px] sm:h-[275px] xl:w-[300px] xl:h-[250px] flex items-center mx-auto my-0 mt-8 xl:mt-0 mb-8 xl:mx-0 xl:my-auto xl:-translate-x-1/5">
                     <img src="/assets/MC4.jpg" alt="Profile picture" className="about-pic rounded-2xl w-full h-full object-cover" />
                 </div>
 
-                {/* Details container */}
-                <div className="about-details-container flex justify-center flex-col max-w-[90%] xl:max-w-[70%] mx-auto">
-
-                    <div className="about-containers flex flex-wrap xl:flex-nowrap gap-8 mb-8 mt-0 xl:mt-8 justify-center">
-                        <div className="details-container p-6 flex-1 bg-white rounded-2xl border-[0.1rem] border-border-light text-center">
-                            <img src="/assets/experience.png" alt="Experience icon" className="icon h-8 mx-auto" />
-                            <h3 className='font-semibold text-lg my-2'>Professional Background</h3>
-                            <p className='text-text-primary'>9+ years <br /> Strategic HR and process optimization</p>
-                            <div className="switch-container w-full flex justify-center items-center px-6 pb-6 mt-auto">
-                                <SwitchToggle
-                                    id="work-experience-toggle"
-                                    labelText="Show Work Experience"
-                                    checked={openSectionId === 'expanded-timeline'}
-                                    onChange={() => handleExpandClick('expanded-timeline')}
-                                />
-                            </div>
-
-                        </div>
-                        <div className="details-container p-6 flex-1 bg-white rounded-2xl border-[0.1rem] border-border-light text-center">
-                            <img src="/assets/education.png" alt="Education icon" className="icon h-8 mx-auto" />
-                            <h3 className='font-semibold text-lg my-2'>Education</h3>
-                            <p className='text-text-primary'>B.Sc. Psychology <br /> System Development (Current)</p>
-                            <div className="switch-container w-full flex justify-center items-center px-6 pb-6 mt-auto">
-                                <SwitchToggle
-                                    id="education-toggle"
-                                    labelText="Show Education"
-                                    checked={openSectionId === 'expanded-timeline-2'}
-                                    onChange={() => handleExpandClick('expanded-timeline-2')}
-                                />
-                            </div>
-                        </div>
+                    <div className="about-details-container flex justify-center flex-col max-w-[90%] xl:max-w-[70%] mx-auto">
                     </div>
-                    <div className="text-container text-justify xl:text-left">
-                        <p>
-                            I've transitioned from crafting HR strategies to diving into system development, a move that
-                            feels surprisingly natural. Turns out, problem-solving skills are pretty universal, whether
-                            you're optimizing workflows or debugging code. Leading projects in my previous roles taught me a
-                            lot about breaking down complex issues and building effective solutions, which is exactly what
-                            I'm doing now with code. I'm finding that my knack for understanding how things work, and how
-                            people interact with systems, is just as valuable in tech as it was in HR. Currently, I'm fully
-                            immersed in system development studies, eager to apply my unique perspective and build something
-                            cool.
-                        </p>
+                </div>
+                <div className="text-container text-justify xl:text-left">
+                    <p>
+                        I've transitioned from crafting HR strategies to diving into system development, a move that
+                        feels surprisingly natural. Turns out, problem-solving skills are pretty universal, whether
+                        you're optimizing workflows or debugging code. Leading projects in my previous roles taught me a
+                        lot about breaking down complex issues and building effective solutions, which is exactly what
+                        I'm doing now with code. I'm finding that my knack for understanding how things work, and how
+                        people interact with systems, is just as valuable in tech as it was in HR. Currently, I'm fully
+                        immersed in system development studies, eager to apply my unique perspective and build something
+                        cool.
+                    </p>
+                </div>
+            </div>
+
+            <div className="about-containers flex flex-wrap xl:flex-nowrap gap-8 mb-8 mt-0 xl:mt-8 justify-center">
+                <div className="details-container flex flex-col pt-6 flex-1 bg-white rounded-2xl border-[0.1rem] border-border-light text-center">
+                    <img src="/assets/experience.png" alt="Experience icon" className="icon h-8 mx-auto" />
+                    <h3 className='font-semibold text-lg my-2'>Professional Background</h3>
+                    <p className='text-text-primary'>9+ years <br /> Strategic HR and process optimization</p>
+                    <div className="switch-container w-full pt-2 flex justify-start items-center pl-4 pb-4  mt-auto">
+                        <SwitchToggle
+                            id="work-experience-toggle"
+                            labelText="Show Work Experience"
+                            checked={openSectionId === 'expanded-timeline'}
+                            onChange={() => handleExpandClick('expanded-timeline')}
+                        />
+                    </div>
+
+                </div>
+                <div className="details-container flex flex-col pt-6 flex-1 bg-white rounded-2xl border-[0.1rem] border-border-light text-center">
+                    <img src="/assets/education.png" alt="Education icon" className="icon h-8 mx-auto" />
+                    <h3 className='font-semibold text-lg my-2'>Education</h3>
+                    <p className='text-text-primary'>B.Sc. Psychology <br /> System Development (Current)</p>
+                    <div className="switch-container w-full pt-2 flex justify-start items-center pl-4 pb-4 mt-auto">
+                        <SwitchToggle
+                            id="education-toggle"
+                            labelText="Show Education"
+                            checked={openSectionId === 'expanded-timeline-2'}
+                            onChange={() => handleExpandClick('expanded-timeline-2')}
+                        />
                     </div>
                 </div>
             </div>
