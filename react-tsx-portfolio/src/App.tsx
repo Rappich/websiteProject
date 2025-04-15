@@ -8,6 +8,7 @@ import { useState } from 'react';
 import HeroSection from './sections/HeroSection';
 import AboutSection from './sections/AboutSection';
 import ExperienceSection from './sections/ExperienceSection';
+import ProjectSection from './sections/ProjectSection';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         {isLoaded && <HeroSection />}
         {isLoaded && <AboutSection />}
         {isLoaded && <ExperienceSection />}
+        {isLoaded && <ProjectSection />}
       </div>
     </Router>
   );
