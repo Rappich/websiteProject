@@ -22,20 +22,16 @@ const Button: React.FC<ButtonProps> = ({
     target,
     rel,
 }) => {
-    // Base styles applied to all buttons
     const baseStyles =
         'font-semibold transition-all duration-300 ease-in-out p-4 w-32 rounded-full border-[0.1rem]';
 
-    // Styles applied based on the `variant` prop
     const variantStyles =
         variant === 'primary'
             ? 'bg-text-dark text-white border-text-dark hover:bg-black hover:border-black' // Primary button styles
             : 'bg-transparent text-text-dark border-text-dark hover:bg-text-dark hover:text-white hover:border-text-dark'; // Secondary button styles
 
-    // Combine base styles, variant styles, and any additional classes
     const combinedClassName = clsx(baseStyles, variantStyles, className);
 
-    // Render an anchor tag if `href` is provided
     if (href) {
         return (
             <a

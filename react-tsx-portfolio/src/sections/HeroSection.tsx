@@ -21,7 +21,6 @@ const HeroSection: React.FC = () => {
             id="profile"
             className="flex flex-col xl:flex-row items-center justify-center gap-20 px-[5%] xl:px-40 min-h-fit xl:min-h-0 h-fit xl:h-80vh pb-0 xl:pb-32 mb-0 xl:mb-24 pt-[4vh]"
         >
-            {/* Profile Picture Container */}
             <div className="section__pic-container w-auto h-[46vw] justify-center sm:w-[275px] sm:h-[275px] xl:w-[400px] xl:h-[400px] flex items-center mx-auto my-0 mb-8 xl:mx-0 xl:my-auto">
                 <div className="profile-picture-container w-full sm:w-[275px] sm:h-[275px] xl:w-[350px] xl:h-[350px] flex justify-center items-center m-[10px] mx-auto">
                     <img
@@ -31,14 +30,11 @@ const HeroSection: React.FC = () => {
                     />
                 </div>
             </div>
-
-            {/* Text Container */}
             <div className="section__text self-center text-center">
                 <p className="section__text__p1 font-semibold text-center">Hello, I'm </p>
                 <h1 className="title text-3xl xl:text-5xl text-center my-2 font-bold">Fredrik Rappich</h1>
                 <p className="section__text__p2 text-lg xl:text-xl mb-4 font-semibold">Software Developer</p>
 
-                {/* Button Container */}
                 <div className="btn-container flex flex-wrap flex-row sm:flex-col items-center justify-center gap-2 mt-2 w-full">
                     <div className="contact-btns flex flex-wrap justify-center gap-4 w-full">
                         <Button variant="secondary" onClick={handleDownloadCv} className="w-full sm:w-auto">
@@ -49,7 +45,6 @@ const HeroSection: React.FC = () => {
                         </Button>
                     </div>
 
-                    {/* Social Media Links */}
                     <div id="socials-container" className="flex justify-center gap-1 mt-4">
                         <ul className="social-icons flex justify-center gap-0 list-none p-0 m-0">
                             <li className="m-[5px]">

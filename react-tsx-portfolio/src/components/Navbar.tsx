@@ -4,30 +4,12 @@ import clsx from 'clsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
-/**
- * Navbar component that provides a responsive navigation bar for the website.
- *
- * Features:
- * - Includes both desktop and mobile navigation bars.
- * - Desktop navigation is displayed on larger screens (xl and above).
- * - Mobile navigation includes a hamburger menu for smaller screens.
- * - Navigation links are dynamically rendered from the `navLinksData` array.
- * - Smooth transitions and hover effects are applied to navigation links.
- *
- * @component
- * @returns {JSX.Element} The Navbar component.
- */
 export const Navbar: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-    /**
-     * Toggles the state of the mobile menu (open/closed).
-     */
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
 
-    // Array containing navigation link data
     const navLinksData = [
         { href: '#about', text: 'About', internal: true },
         { href: '#experience', text: 'Experience', internal: true },
@@ -36,12 +18,6 @@ export const Navbar: React.FC = () => {
         { href: '/company', text: 'My Company', internal: false },
     ];
 
-    /**
-     * Renders navigation links.
-     *
-     * @param {boolean} isMobile - Determines if the links are being rendered for mobile view.
-     * @returns {JSX.Element[]} A list of navigation links.
-     */
     const renderLinks = (isMobile: boolean = false) =>
         navLinksData.map((link) => (
             <li key={link.text}>
@@ -67,7 +43,6 @@ export const Navbar: React.FC = () => {
 
     return (
         <>
-            {/* Desktop Navigation Bar */}
             <nav
                 id="desktop-nav"
                 className="hidden xl:flex justify-around items-center h-17vh max-w-screen-xl mx-auto"
@@ -78,7 +53,6 @@ export const Navbar: React.FC = () => {
                 </ul>
             </nav>
 
-            {/* Mobile Navigation Bar */}
             <nav
                 id="hamburger-nav"
                 className="flex xl:hidden justify-between items-center h-17vh px-[10%]"

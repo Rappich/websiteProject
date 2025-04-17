@@ -60,7 +60,7 @@ const ExperienceSection: React.FC = () => {
         <section
             id="experience"
             ref={sectionInViewRef}
-            className="relative pt-[4vh] px-[5%] xl:px-10 box-border max-w-screen-xl mx-auto pb-20"
+            className="relative pt-[4vh] px-[5%] xl:px-10 xl:h-96vh box-border max-w-screen-xl mx-auto pb-20"
         >
             <p className="section__text__p1 text-center font-semibold">Explore My</p>
             <h1 className="title text-3xl xl:text-5xl text-center font-bold ">Programing Skills</h1>

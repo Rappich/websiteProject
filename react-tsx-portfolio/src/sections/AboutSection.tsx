@@ -3,15 +3,12 @@ import { NavigationArrow, CloseButton } from '../components/Navigation';
 import { useInView } from 'react-intersection-observer';
 import SwitchToggle from '../components/SwitchToggle';
 import Timeline, { TimelineEntry } from '../components/Timeline';
-import { faArrowDown, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 
 const AboutSection: React.FC = () => {
     const [openSectionId, setOpenSectionId] = React.useState<string | null>(null);
-/*     const [showCloseButton, setShowCloseButton] = React.useState<boolean>(false);
- */
-/*     const showScrollArrow = isSectionInView && openSectionId === null;
- */    const showCloseButton = openSectionId !== null;
+    const showCloseButton = openSectionId !== null;
 
 
     const { ref, inView } = useInView({
@@ -43,17 +40,12 @@ const AboutSection: React.FC = () => {
         <section
             id="about"
             ref={ref}
-            className="relative pt-[4vh] px-[5%] xl:px-10 min-h-fit xl:h-94vh box-border max-w-screen-xl mx-auto"
+            className="relative pt-[4vh] px-[5%] xl:px-10 min-h-fit xl:h-96vh box-border max-w-screen-xl mx-auto"
         >
             <p className="section__text__p1 text-center font-semibold">Get To Know More</p>
             <h1 className="title text-3xl xl:text-5xl text-center font-bold">About Me</h1>
 
-            {/* Main container for picture and details */}
             <div className="section-container block xl:flex gap-16 xl:h-fit mt-0 xl:mt-8">
-
-                {/* Picture container */}
-
-                {/* Details container */}
                 <div> <div className="section__pic-container w-auto h-[46vw] justify-center sm:w-[275px] sm:h-[275px] xl:w-[300px] xl:h-[250px] flex items-center mx-auto my-0 mt-8 xl:mt-0 mb-8 xl:mx-0 xl:my-auto xl:-translate-x-1/5">
                     <img src="/assets/MC4.jpg" alt="Profile picture" className="about-pic rounded-2xl w-full h-full object-cover" />
                 </div>

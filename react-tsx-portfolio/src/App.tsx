@@ -9,6 +9,8 @@ import HeroSection from './sections/HeroSection';
 import AboutSection from './sections/AboutSection';
 import ExperienceSection from './sections/ExperienceSection';
 import ProjectSection from './sections/ProjectSection';
+import ContactSection from './sections/ContactSection';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -26,6 +28,8 @@ function App() {
         {isLoaded && <AboutSection />}
         {isLoaded && <ExperienceSection />}
         {isLoaded && <ProjectSection />}
+        {isLoaded && <ContactSection />}
+        {isLoaded && <Footer />}
       </div>
     </Router>
   );
