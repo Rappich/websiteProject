@@ -1,4 +1,3 @@
-// sections/ProjectsSection.tsx
 import React from "react";
 import ProjectsCarousel, { Project } from "../components/ProjectCarousel";
 
@@ -31,11 +30,14 @@ const projectsData: Project[] = [
     githubUrl: "https://github.com/sandpand/Grupp5-v-xtis",
     liveUrl: "#",
   },
-
 ];
 
 const ProjectsSection: React.FC = () => {
-  return <ProjectsCarousel projects={projectsData} />;
+  return (
+    <section id="projects">
+      <ProjectsCarousel projects={projectsData} />
+    </section>
+  );
 };
 
 export default ProjectsSection;

@@ -19,7 +19,8 @@ interface TimelineProps {
     onClose: () => void;
 }
 
-const Timeline: React.FC<TimelineProps> = ({ id, title, data, onClose }) => {
+const Timeline: React.FC<TimelineProps> = ({ id, title, data }) => {
+
 
     return (
         <section id={id} className="expandable-section relative pt-[4vh] px-[5%] xl:px-40 box-border">

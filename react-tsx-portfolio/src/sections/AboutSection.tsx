@@ -9,19 +9,18 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
 const AboutSection: React.FC = () => {
     const [openSectionId, setOpenSectionId] = React.useState<string | null>(null);
     const showCloseButton = openSectionId !== null;
-
-
     const { ref, inView } = useInView({
         threshold: 0.3,
         triggerOnce: false
     });
+
     const handleExpandClick = (targetId: string) => {
         setOpenSectionId((prevId) => (prevId === targetId ? null : targetId));
     };
-
     const handleCloseTimeline = () => {
         setOpenSectionId(null);
     };
+
     const workExperienceData: TimelineEntry[] = [
 
         { id: 'we1', imageSrc: '/assets/Rappich.jpg', title: 'HR & IT Consultant | Business Owner', subtitle: 'Rappich Consulting AB', duration: 'Sep 2024 - Current', description: 'While pursuing my studies, I founded Rappich Consulting and currently work as a part-time consultant at Eurenco. I create, develop, and implement new HR strategies within Recruitment, Learning & Development, Onboarding, Performance, and Employee Relations. As a project lead, I focus on transforming HR processes, ensuring efficiency, and driving long-term growth through strategic and technical solutions.', listItems: [], position: 'left' },
@@ -115,11 +114,13 @@ const AboutSection: React.FC = () => {
                     />
                 )
             }
-            <NavigationArrow
-                targetId="experience"
-                ariaLabel="Go to experience section"
-                isVisible={inView}
-            />
+            {openSectionId === null && (
+                <NavigationArrow
+                    targetId="experience"
+                    ariaLabel="Go to experience section"
+                    isVisible={inView}
+                />
+            )}
             <CloseButton
                 onClick={handleCloseTimeline}
                 ariaLabel="Close section"
