@@ -7,8 +7,8 @@ const Footer: React.FC = () => {
         { href: '#experience', text: 'Experience', internal: true },
         { href: '#projects', text: 'Portfolio', internal: true },
         { href: '#contact', text: 'Contact', internal: true },
-        { href: '/company', text: 'My Company', internal: false },
-    ];
+/*         { href: '/company', text: 'My Company', internal: false },
+ */    ];
 
     return (
         <footer className="h-[40vh] xl:h-26vh mx-4 flex flex-col justify-center items-center pt-8">

@@ -15,8 +15,8 @@ export const Navbar: React.FC = () => {
         { href: '#experience', text: 'Experience', internal: true },
         { href: '#projects', text: 'Portfolio', internal: true },
         { href: '#contact', text: 'Contact', internal: true },
-        { href: '/company', text: 'My Company', internal: false },
-    ];
+/*         { href: '/company', text: 'My Company', internal: false },
+ */    ];
 
     const renderLinks = (isMobile: boolean = false) =>
         navLinksData.map((link) => (
