@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { faArrowDown, } from '@fortawesome/free-solid-svg-icons';
 import { NavigationArrow, } from '../components/Navigation';
 import { useInView } from 'react-intersection-observer';
@@ -32,7 +32,7 @@ const backendSkills: Skill[] = [
 
 
 const ExperienceSection: React.FC = () => {
-    const [openSectionId, setOpenSectionId] = useState<string | null>(null);
+    const [openSectionId] = useState<string | null>(null);
 
     const { ref: sectionInViewRef, inView: isSectionInView } = useInView({
         threshold: 0.3,

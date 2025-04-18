@@ -122,7 +122,12 @@ const AboutSection: React.FC = () => {
                 />
             )}
             <CloseButton
-                onClick={handleCloseTimeline}
+                onClick={() => {
+                    handleCloseTimeline();
+                    setTimeout(() => {
+                        document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+                    }, 100);
+                }}
                 ariaLabel="Close section"
                 isVisible={showCloseButton}
                 icon={faTimes}

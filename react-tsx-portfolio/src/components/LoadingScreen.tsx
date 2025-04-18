@@ -18,9 +18,9 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
                 clearInterval(interval);
                 setTimeout(() => {
                     onComplete();
-                }, 1000);
+                }, 500);
             }
-        }, 100);
+        }, 50);
 
         return () => clearInterval(interval);
     }, [onComplete]);

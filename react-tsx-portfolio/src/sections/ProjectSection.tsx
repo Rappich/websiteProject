@@ -1,9 +1,9 @@
 import React from "react";
 import ProjectsCarousel, { Project } from "../components/ProjectCarousel";
-
 import webDevImage from "/assets/www.png";
 import munchkinImage from "/assets/munchkin.jpg";
 import awsImage from "/assets/AWS2.jpg";
+
 
 const projectsData: Project[] = [
   {
@@ -33,10 +33,13 @@ const projectsData: Project[] = [
 ];
 
 const ProjectsSection: React.FC = () => {
+
   return (
-    <section id="projects">
-      <ProjectsCarousel projects={projectsData} />
-    </section>
+    <>
+      <section id="projects">
+        <ProjectsCarousel projects={projectsData} />
+      </section>
+    </>
   );
 };
 
