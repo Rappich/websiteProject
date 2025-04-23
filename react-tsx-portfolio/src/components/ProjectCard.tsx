@@ -11,7 +11,7 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ imageSrc, title, description, githubUrl, liveUrl }) => {
     return (
-        <div className="details-container color-container p-4 md:p-6 flex flex-col px-8 bg-bg-light rounded-2xl border-[0.1rem] border-border-light text-center h-full max-w-sm mx-auto">
+        <div className="details-container color-container p-4 md:p-6 flex flex-col bg-bg-light rounded-2xl border-[0.1rem] border-border-light text-center h-full max-w-sm mx-auto">
 
             <div className="article-container mb-4 flex-shrink-0">
                 <img src={imageSrc} alt={`${title} project`} className="rounded-2xl w-full h-60 object-cover mx-auto" />
