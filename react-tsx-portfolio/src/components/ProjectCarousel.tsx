@@ -36,7 +36,7 @@ const responsive = {
 
 const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ projects }) => {
   return (
-    <div className="py-10 px-[5%] xl:px-10 max-w-screen-xl mx-auto xl:h-96vh">
+    <div className="py-10 px-[5%] xl:px-10 max-w-screen-xl mx-auto xl:h-40vh">
       <p className="text-center font-semibold text-gray-600">Browse My Recent</p>
       <h2 className="text-3xl xl:text-5xl font-bold text-center mb-10">Projects</h2>
       <Carousel

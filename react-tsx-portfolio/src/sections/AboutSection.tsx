@@ -39,7 +39,7 @@ const AboutSection: React.FC = () => {
         <section
             id="about"
             ref={ref}
-            className="relative pt-[4vh] px-[5%] xl:px-10 min-h-fit xl:h-96vh box-border max-w-screen-xl mx-auto"
+            className="relative pt-[4vh] px-[5%] xl:px-10 min-h-fit xl:h-94vh box-border max-w-screen-xl mx-auto"
         >
             <p className="section__text__p1 text-center font-semibold">Get To Know More</p>
             <h1 className="title text-3xl xl:text-5xl text-center font-bold">About Me</h1>
