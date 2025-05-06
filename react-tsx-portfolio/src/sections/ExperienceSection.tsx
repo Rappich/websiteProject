@@ -66,7 +66,7 @@ const ExperienceSection: React.FC = () => {
             <h1 className="title text-3xl xl:text-5xl text-center font-bold ">Programing Skills</h1>
 
             <div className="experience-details-container flex justify-center flex-col mt-8">
-                <div className="about-containers flex flex-wrap xl:flex-nowrap gap-8 mb-8 mt-0 justify-center">
+                <div className="about-containers flex flex-col xl:flex-row gap-8 mb-8 mt-0 justify-center">
 
 
                     <div className="details-container-with-btn relative p-6 flex-1 bg-white rounded-2xl border-[0.1rem] border-border-light text-center min-h-[400px]">
