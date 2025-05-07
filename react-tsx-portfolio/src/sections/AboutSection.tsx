@@ -44,90 +44,94 @@ const AboutSection: React.FC = () => {
             <p className="section__text__p1 text-center font-semibold">Get To Know More</p>
             <h1 className="title text-3xl xl:text-5xl text-center font-bold">About Me</h1>
 
-            <div className="section-container flex flex-col xl:flex-row gap-8 mt-8"
-            >
-                <div>
-
-                    <div className="section__pic-container w-[80%] max-w-[300px] aspect-square flex items-center mx-auto mb-8 xl:mb-0 xl:mx-0 xl:my-auto">
-                        <img src="/assets/MC4.jpg" alt="Profile picture" className="about-pic rounded-2xl w-full h-full object-cover" />
-                    </div>
-
-                    <div className="about-details-container flex justify-center flex-col max-w-[90%] xl:max-w-[70%] mx-auto">
-                    </div>
-                </div>
-                <div className="text-container text-center xl:text-left"
-                >
-                    <p>
-                        I've transitioned from crafting HR strategies to diving into system development, a move that
-                        feels surprisingly natural. Turns out, problem-solving skills are pretty universal, whether
-                        you're optimizing workflows or debugging code. Leading projects in my previous roles taught me a
-                        lot about breaking down complex issues and building effective solutions, which is exactly what
-                        I'm doing now with code. I'm finding that my knack for understanding how things work, and how
-                        people interact with systems, is just as valuable in tech as it was in HR. Currently, I'm fully
-                        immersed in system development studies, eager to apply my unique perspective and build something
-                        cool.
-                    </p>
-                </div>
-            </div>
-
-            <div className="about-containers flex flex-wrap xl:flex-nowrap gap-8 mb-8 mt-0 xl:mt-8 justify-center">
-                <div className="details-container flex flex-col pt-6 flex-1 bg-white rounded-2xl border-[0.1rem] border-border-light text-center">
-                    <img src="/assets/experience.png" alt="Experience icon" className="icon h-8 mx-auto" />
-                    <h3 className='font-semibold text-lg my-2'>Professional Background</h3>
-                    <p className='text-text-primary'>9+ years <br /> Strategic HR and process optimization</p>
-                    <div className="switch-container w-full pt-2 flex justify-start items-center pl-4 pb-4  mt-auto">
-                        <SwitchToggle
-                            id="work-experience-toggle"
-                            labelText="Show Work Experience"
-                            checked={openSectionId === 'expanded-timeline'}
-                            onChange={() => handleExpandClick('expanded-timeline')}
-                        />
-                    </div>
-
-                </div>
-                <div className="details-container flex flex-col pt-6 flex-1 bg-white rounded-2xl border-[0.1rem] border-border-light text-center">
-                    <img src="/assets/education.png" alt="Education icon" className="icon h-8 mx-auto" />
-                    <h3 className='font-semibold text-lg my-2'>Education</h3>
-                    <p className='text-text-primary'>B.Sc. Psychology <br /> System Development (Current)</p>
-                    <div className="switch-container w-full pt-2 flex justify-start items-center pl-4 pb-4 mt-auto">
-                        <SwitchToggle
-                            id="education-toggle"
-                            labelText="Show Education"
-                            checked={openSectionId === 'expanded-timeline-2'}
-                            onChange={() => handleExpandClick('expanded-timeline-2')}
+            <div className="flex flex-col xl:flex-row gap-8 mt-8">
+                {/* Left Column: Image */}
+                <div className="w-full xl:w-1/3 flex justify-center xl:justify-start">
+                    <div className="w-[80%] max-w-[300px] sm:max-w-[350px] md:max-w-[400px] xl:max-w-[500px] aspect-square shrink-0">
+                        <img
+                            src="/assets/MC4.jpg"
+                            alt="Profile picture"
+                            className="rounded-2xl w-full h-full object-cover"
                         />
                     </div>
                 </div>
+
+                {/* Right Column: Text and Expandable Sections */}
+                <div className="w-full xl:w-2/3 flex flex-col gap-8">
+                    {/* About Me Text */}
+                    <div className="max-w-4xl mx-auto text-center xl:text-left">
+                        <p>
+                            I've transitioned from crafting HR strategies to diving into system development, a move that feels surprisingly natural. Turns out, problem-solving skills are pretty universal, whether you're optimizing workflows or debugging code. Leading projects in my previous roles taught me a lot about breaking down complex issues and building effective solutions, which is exactly what I'm doing now with code. I'm finding that my knack for understanding how things work, and how people interact with systems, is just as valuable in tech as it was in HR. Currently, I'm fully immersed in system development studies, eager to apply my unique perspective and build something cool.
+                        </p>
+                    </div>
+
+                    {/* Expandable Sections */}
+                    <div className="flex flex-wrap xl:flex-nowrap gap-8 justify-center">
+                        {/* Work Experience */}
+                        <div className="flex flex-col pt-6 flex-1 bg-white rounded-2xl border-[0.1rem] border-border-light text-center">
+                            <img src="/assets/experience.png" alt="Experience icon" className="icon h-8 mx-auto" />
+                            <h3 className="font-semibold text-lg my-2">Professional Background</h3>
+                            <p className="text-text-primary">
+                                9+ years <br /> Strategic HR and process optimization
+                            </p>
+                            <div className="switch-container w-full pt-2 flex justify-start items-center pl-4 pb-4 mt-auto">
+                                <SwitchToggle
+                                    id="work-experience-toggle"
+                                    labelText="Show Work Experience"
+                                    checked={openSectionId === 'expanded-timeline'}
+                                    onChange={() => handleExpandClick('expanded-timeline')}
+                                />
+                            </div>
+                        </div>
+
+                        {/* Education */}
+                        <div className="flex flex-col pt-6 flex-1 bg-white rounded-2xl border-[0.1rem] border-border-light text-center">
+                            <img src="/assets/education.png" alt="Education icon" className="icon h-8 mx-auto" />
+                            <h3 className="font-semibold text-lg my-2">Education</h3>
+                            <p className="text-text-primary">
+                                B.Sc. Psychology <br /> System Development (Current)
+                            </p>
+                            <div className="switch-container w-full pt-2 flex justify-start items-center pl-4 pb-4 mt-auto">
+                                <SwitchToggle
+                                    id="education-toggle"
+                                    labelText="Show Education"
+                                    checked={openSectionId === 'expanded-timeline-2'}
+                                    onChange={() => handleExpandClick('expanded-timeline-2')}
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            {
-                openSectionId === 'expanded-timeline' && (
-                    <Timeline
-                        id="expanded-timeline"
-                        title="Work Experience"
-                        data={workExperienceData}
-                        onClose={handleCloseTimeline}
-                    />
-                )
-            }
-            {
-                openSectionId === 'expanded-timeline-2' && (
-                    <Timeline
-                        id="expanded-timeline-2"
-                        title="Education"
-                        data={educationData}
-                        onClose={handleCloseTimeline}
-                    />
-                )
-            }
-            {
-                openSectionId === null && (
-                    <NavigationArrow
-                        targetId="experience"
-                        ariaLabel="Go to experience section"
-                        isVisible={inView}
-                    />
-                )
-            }
+
+            {/* Conditional Rendering of Timelines */}
+            {openSectionId === 'expanded-timeline' && (
+                <Timeline
+                    id="expanded-timeline"
+                    title="Work Experience"
+                    data={workExperienceData}
+                    onClose={handleCloseTimeline}
+                />
+            )}
+            {openSectionId === 'expanded-timeline-2' && (
+                <Timeline
+                    id="expanded-timeline-2"
+                    title="Education"
+                    data={educationData}
+                    onClose={handleCloseTimeline}
+                />
+            )}
+
+            {/* Navigation Arrow */}
+            {openSectionId === null && (
+                <NavigationArrow
+                    targetId="experience"
+                    ariaLabel="Go to experience section"
+                    isVisible={inView}
+                />
+            )}
+
+            {/* Close Button */}
             <CloseButton
                 onClick={() => {
                     handleCloseTimeline();
@@ -139,7 +143,8 @@ const AboutSection: React.FC = () => {
                 isVisible={showCloseButton}
                 icon={faTimes}
             />
-        </section >
+        </section>
+
     );
 };
 
