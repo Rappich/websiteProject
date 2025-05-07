@@ -39,20 +39,24 @@ const AboutSection: React.FC = () => {
         <section
             id="about"
             ref={ref}
-            className="relative pt-[4vh] px-[5%] xl:px-10 min-h-fit xl:h-94vh box-border max-w-screen-xl mx-auto"
+            className="relative pt-8 px-5 xl:px-10 min-h-fit box-border max-w-screen-xl mx-auto"
         >
             <p className="section__text__p1 text-center font-semibold">Get To Know More</p>
             <h1 className="title text-3xl xl:text-5xl text-center font-bold">About Me</h1>
 
-            <div className="section-container block xl:flex gap-16 xl:h-fit mt-0 xl:mt-8">
-                <div> <div className="section__pic-container w-auto h-[46vw] justify-center sm:w-[275px] sm:h-[275px] xl:w-[300px] xl:h-[250px] flex items-center mx-auto my-0 mt-8 xl:mt-0 mb-8 xl:mx-0 xl:my-auto xl:-translate-x-1/5">
-                    <img src="/assets/MC4.jpg" alt="Profile picture" className="about-pic rounded-2xl w-full h-full object-cover" />
-                </div>
+            <div className="section-container flex flex-col xl:flex-row gap-8 mt-8"
+            >
+                <div>
+
+                    <div className="section__pic-container w-[80%] max-w-[300px] aspect-square flex items-center mx-auto mb-8 xl:mb-0 xl:mx-0 xl:my-auto">
+                        <img src="/assets/MC4.jpg" alt="Profile picture" className="about-pic rounded-2xl w-full h-full object-cover" />
+                    </div>
 
                     <div className="about-details-container flex justify-center flex-col max-w-[90%] xl:max-w-[70%] mx-auto">
                     </div>
                 </div>
-                <div className="text-container text-justify xl:text-left">
+                <div className="text-container text-center xl:text-left"
+                >
                     <p>
                         I've transitioned from crafting HR strategies to diving into system development, a move that
                         feels surprisingly natural. Turns out, problem-solving skills are pretty universal, whether
@@ -95,14 +99,15 @@ const AboutSection: React.FC = () => {
                     </div>
                 </div>
             </div>
-            {openSectionId === 'expanded-timeline' && (
-                <Timeline
-                    id="expanded-timeline"
-                    title="Work Experience"
-                    data={workExperienceData}
-                    onClose={handleCloseTimeline}
-                />
-            )
+            {
+                openSectionId === 'expanded-timeline' && (
+                    <Timeline
+                        id="expanded-timeline"
+                        title="Work Experience"
+                        data={workExperienceData}
+                        onClose={handleCloseTimeline}
+                    />
+                )
             }
             {
                 openSectionId === 'expanded-timeline-2' && (
@@ -114,13 +119,15 @@ const AboutSection: React.FC = () => {
                     />
                 )
             }
-            {openSectionId === null && (
-                <NavigationArrow
-                    targetId="experience"
-                    ariaLabel="Go to experience section"
-                    isVisible={inView}
-                />
-            )}
+            {
+                openSectionId === null && (
+                    <NavigationArrow
+                        targetId="experience"
+                        ariaLabel="Go to experience section"
+                        isVisible={inView}
+                    />
+                )
+            }
             <CloseButton
                 onClick={() => {
                     handleCloseTimeline();
@@ -132,7 +139,7 @@ const AboutSection: React.FC = () => {
                 isVisible={showCloseButton}
                 icon={faTimes}
             />
-        </section>
+        </section >
     );
 };
 
