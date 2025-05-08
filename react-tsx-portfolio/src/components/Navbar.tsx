@@ -45,7 +45,7 @@ export const Navbar: React.FC = () => {
         <>
             <nav
                 id="desktop-nav"
-                className="hidden xl:flex justify-around items-center h-17vh max-w-screen-xl mx-auto"
+                className="hidden xl:flex justify-around items-center py-6 max-w-screen-xl mx-auto w-full"
             >
                 <div className="logo text-xl xl:text-3xl cursor-default">Fredrik Rappich</div>
                 <ul className="nav-links flex flex-row gap-8 list-none m-0 p-0">
@@ -55,7 +55,7 @@ export const Navbar: React.FC = () => {
 
             <nav
                 id="hamburger-nav"
-                className="flex xl:hidden justify-between items-center h-17vh px-[10%]"
+                className="flex xl:hidden justify-between items-center py-4 px-[10%] w-full"
             >
                 <div className="logo text-xl cursor-default">Fredrik Rappich</div>
                 <div className="hamburger-menu relative inline-block">

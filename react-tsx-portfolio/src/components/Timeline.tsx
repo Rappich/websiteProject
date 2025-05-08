@@ -20,30 +20,28 @@ interface TimelineProps {
 }
 
 const Timeline: React.FC<TimelineProps> = ({ id, title, data }) => {
-
-
     return (
-        <section id={id} className="expandable-section relative pt-[4vh] px-[5%] xl:px-40 box-border">
-            <h1 className="title text-3xl xl:text-5xl text-center font-bold mb-8">{title}</h1>
+        <section id={id} className="expandable-section relative pt-8 px-5 box-border">
+            <h1 className="title text-3xl text-center font-bold mb-6">{title}</h1>
 
-            <div className="timeline relative w-full mt-16 pb-8 flex flex-col gap-[30px] sm:gap-[50px]">
+            <div className="timeline relative w-full mt-8 pb-8 flex flex-col gap-12">
                 <div
                     id="timeline-divider"
-                    className="absolute w-[3px] bg-text-dark top-0 bottom-8 left-1/2 xl:px-8-translate-x-1/2 hidden xl:block"
+                    className="absolute w-[3px] bg-text-dark top-0 bottom-8 left-1/2 -translate-x-1/2 hidden lg:block"
                 ></div>
 
                 {data.map((entry) => (
-                    <div key={entry.id} className="relative">
+                    <div key={entry.id} className="relative flex flex-col items-center lg:flex-row lg:items-start">
                         <div
                             className={clsx(
-                                "relative w-[90%] mb-6 xl:w-[45%]",
+                                "relative w-full lg:w-[45%] mb-10 lg:mb-0", // Increased margin for better spacing on small screens
                                 {
-                                    'xl:mr-auto': entry.position === 'left',
-                                    'xl:ml-auto': entry.position === 'right',
+                                    'lg:mr-auto': entry.position === 'left',
+                                    'lg:ml-auto': entry.position === 'right',
                                 }
                             )}
                         >
-                            <div className={clsx("relative p-4 border border-border-light rounded-lg bg-white shadow-sm")}>
+                            <div className="relative p-4 border border-border-light rounded-lg bg-white shadow-sm">
                                 <div className="timeline-container flex flex-col items-start">
                                     <h3 className="timeline-title font-semibold text-lg mb-1">{entry.title}</h3>
                                     <h4 className="timeline-subtitle text-text-dark mb-1">{entry.subtitle}</h4>
@@ -61,9 +59,7 @@ const Timeline: React.FC<TimelineProps> = ({ id, title, data }) => {
                         </div>
 
                         <div
-                            className={clsx(
-                                'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40px] h-[40px] sm:w-[60px] sm:h-[60px] xl:w-[80px] xl:h-[80px] rounded-full overflow-hidden border-2 border-text-dark bg-white flex items-center justify-center'
-                            )}
+                            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40px] h-[40px] sm:w-[60px] sm:h-[60px] md:w-[80px] md:h-[80px] rounded-full overflow-hidden border-2 border-text-dark bg-white flex items-center justify-center -mt-10 md:mt-0"
                         >
                             <img
                                 src={entry.imageSrc || '../assets/experience.png'}
