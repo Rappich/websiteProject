@@ -15,8 +15,7 @@ export const Navbar: React.FC = () => {
         { href: '#experience', text: 'Experience', internal: true },
         { href: '#projects', text: 'Portfolio', internal: true },
         { href: '#contact', text: 'Contact', internal: true },
-/*         { href: '/company', text: 'My Company', internal: false },
- */    ];
+    ];
 
     const renderLinks = (isMobile: boolean = false) =>
         navLinksData.map((link) => (
@@ -43,20 +42,14 @@ export const Navbar: React.FC = () => {
 
     return (
         <>
-            <nav
-                id="desktop-nav"
-                className="hidden xl:flex justify-around items-center py-6 max-w-screen-xl mx-auto w-full"
-            >
+            <nav id="desktop-nav" className="hidden md:flex justify-between items-center py-6 max-w-screen-xl mx-auto w-full">
                 <div className="logo text-xl xl:text-3xl cursor-default">Fredrik Rappich</div>
-                <ul className="nav-links flex flex-row gap-8 list-none m-0 p-0">
+                <ul className="nav-links flex gap-6 list-none m-0 p-0">
                     {renderLinks(false)}
                 </ul>
             </nav>
 
-            <nav
-                id="hamburger-nav"
-                className="flex xl:hidden justify-between items-center py-4 px-[10%] w-full"
-            >
+            <nav id="hamburger-nav" className="flex md:hidden justify-between items-center py-4 px-6 w-full">
                 <div className="logo text-xl cursor-default">Fredrik Rappich</div>
                 <div className="hamburger-menu relative inline-block">
                     <div
@@ -65,6 +58,7 @@ export const Navbar: React.FC = () => {
                         aria-label="Toggle menu"
                         role="button"
                         aria-expanded={isMenuOpen}
+                        aria-controls="mobile-menu"
                     >
                         <FontAwesomeIcon
                             icon={isMenuOpen ? faTimes : faBars}
@@ -72,12 +66,13 @@ export const Navbar: React.FC = () => {
                         />
                     </div>
                     <div
+                        id="mobile-menu"
                         className={clsx(
                             'menu-links absolute top-full right-0 bg-white w-fit max-h-0 overflow-hidden transition-all duration-300 ease-in-out shadow-md z-20',
-                            isMenuOpen && 'max-h-[300px]'
+                            isMenuOpen && 'max-h-screen p-4'
                         )}
                     >
-                        <ul className="flex flex-col gap-2 text-center list-none m-0 p-4">
+                        <ul className="flex flex-col gap-2 text-center list-none m-0">
                             {renderLinks(true)}
                         </ul>
                     </div>

@@ -4,10 +4,9 @@ import webDevImage from "/assets/www.png";
 import munchkinImage from "/assets/munchkin.jpg";
 import awsImage from "/assets/AWS2.jpg";
 import NeverAloneImage from "/assets/NeverAlone.png";
-import { useInView } from 'react-intersection-observer';
-import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
-import { NavigationArrow } from '../components/Navigation';
-
+import { useInView } from "react-intersection-observer";
+import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { NavigationArrow } from "../components/Navigation";
 
 const projectsData: Project[] = [
   {
@@ -41,8 +40,7 @@ const projectsData: Project[] = [
     description: "IoT - School project",
     githubUrl: "https://github.com/ChasChallangeIII/NeverAlone",
     liveUrl: "#",
-  }
-
+  },
 ];
 
 const ProjectsSection: React.FC = () => {
@@ -50,21 +48,17 @@ const ProjectsSection: React.FC = () => {
     threshold: 0.3,
     triggerOnce: false,
   });
-  const showScrollArrow = isSectionInView;
 
   return (
-    <>
-      <section id="projects" ref={sectionInViewRef}>
-        <ProjectsCarousel projects={projectsData} />
-        <NavigationArrow
-          targetId="contact"
-          ariaLabel="Go to contact section"
-          isVisible={showScrollArrow}
-          icon={faArrowDown}
-        />
-      </section>
-    </>
-
+    <section id="projects" ref={sectionInViewRef} className="pt-6 pb-20">
+      <ProjectsCarousel projects={projectsData} />
+      <NavigationArrow
+        targetId="contact"
+        ariaLabel="Go to contact section"
+        isVisible={isSectionInView}
+        icon={faArrowDown}
+      />
+    </section>
   );
 };
 

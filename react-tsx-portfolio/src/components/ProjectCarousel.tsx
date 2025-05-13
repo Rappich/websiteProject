@@ -23,12 +23,12 @@ const responsive = {
     slidesToSlide: 1,
   },
   tablet: {
-    breakpoint: { max: 1024, min: 464 },
+    breakpoint: { max: 1024, min: 640 },
     items: 2,
     slidesToSlide: 1,
   },
   mobile: {
-    breakpoint: { max: 464, min: 0 },
+    breakpoint: { max: 640, min: 0 },
     items: 1,
     slidesToSlide: 1,
   },
@@ -36,9 +36,11 @@ const responsive = {
 
 const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ projects }) => {
   return (
-    <div className="py-10 px-[5%] xl:px-10 max-w-screen-xl mx-auto xl:h-40vh">
-      <p className="text-center font-semibold text-gray-600">Browse My Recent</p>
-      <h2 className="text-3xl xl:text-5xl font-bold text-center mb-10">Projects</h2>
+    <div className="max-w-screen-xl mx-auto px-4 sm:px-6 xl:px-10">
+      <div className="text-center mb-10">
+        <p className="text-sm font-semibold text-gray-600">Browse My Recent</p>
+        <h2 className="text-3xl xl:text-5xl font-bold">Projects</h2>
+      </div>
       <Carousel
         swipeable
         draggable
@@ -47,7 +49,6 @@ const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ projects }) => {
         ssr
         infinite
         autoPlay={false}
-        autoPlaySpeed={4000}
         keyBoardControl
         transitionDuration={500}
         removeArrowOnDeviceType={["tablet", "mobile"]}
@@ -55,14 +56,7 @@ const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ projects }) => {
         itemClass="px-2"
       >
         {projects.map((project) => (
-          <ProjectCard
-            key={project.id}
-            imageSrc={project.imageSrc}
-            title={project.title}
-            description={project.description}
-            githubUrl={project.githubUrl}
-            liveUrl={project.liveUrl}
-          />
+          <ProjectCard key={project.id} {...project} />
         ))}
       </Carousel>
     </div>
