@@ -31,8 +31,8 @@ const HeroSection: React.FC = () => {
                 </div>
             </div>
             <div className="section__text text-center max-w-sm w-full">
-                <p className="text-sm font-semibold">Hello, I'm</p>
-                <h1 className="title text-2xl sm:text-3xl xl:text-5xl my-2 font-bold">Fredrik Rappich</h1>
+                <p className="text-sm  text-gray-600 font-semibold">Hello, I'm</p>
+                <h1 className="title text-2xl sm:text-3xl xl:text-5xl my-2  text-gray-600 font-bold">Fredrik Rappich</h1>
                 <p className="section__text__p2 text-base sm:text-lg xl:text-xl mb-4 font-semibold">
                     Software Developer
                 </p>
