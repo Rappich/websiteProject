@@ -42,11 +42,13 @@ export const Navbar: React.FC = () => {
 
     return (
         <>
-            <nav id="desktop-nav" className="hidden md:flex justify-between items-center py-6 max-w-screen-xl mx-auto w-full">
-                <div className="logo text-xl xl:text-3xl cursor-default">Fredrik Rappich</div>
-                <ul className="nav-links flex gap-6 list-none m-0 p-0">
-                    {renderLinks(false)}
-                </ul>
+            <nav className="hidden md:flex justify-between items-center py-6 w-full px-6">
+                <div className="flex justify-between items-center w-full max-w-screen-xl mx-auto">
+                    <div className="logo text-xl xl:text-3xl cursor-default">Fredrik Rappich</div>
+                    <ul className="nav-links flex gap-6 list-none m-0 p-0">
+                        {renderLinks(false)}
+                    </ul>
+                </div>
             </nav>
 
             <nav id="hamburger-nav" className="flex md:hidden justify-between items-center py-4 px-6 w-full">
