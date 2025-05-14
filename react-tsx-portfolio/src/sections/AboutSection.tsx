@@ -39,10 +39,10 @@ const AboutSection: React.FC = () => {
         <section
             id="about"
             ref={ref}
-            className="relative pt-8 pb-32 px-5 xl:px-10 min-h-fit box-border max-w-screen-xl mx-auto"
+            className="relative pt-6 pb-20 px-5 xl:px-10 min-h-fit box-border max-w-screen-xl mx-auto"
         >
-            <p className="section__text__p1 text-center font-semibold">Get To Know More</p>
-            <h1 className="title text-3xl xl:text-5xl text-center font-bold">About Me</h1>
+            <p className="section__text__p1 text-center  text-gray-600 font-semibold">Get To Know More</p>
+            <h1 className="title text-3xl xl:text-5xl  text-gray-600 text-center font-bold">About Me</h1>
 
             <div className="flex flex-col xl:flex-row gap-8 mt-8">
                 <div className="w-full xl:w-1/3 flex justify-center xl:justify-start">
@@ -119,7 +119,7 @@ const AboutSection: React.FC = () => {
             )}
 
 
-            <div className="mt-8 flex justify-center gap-4">
+            <div className="mt-8 pb-6 flex justify-center gap-4">
                 {openSectionId === null && (
                     <NavigationArrow
                         targetId="experience"
