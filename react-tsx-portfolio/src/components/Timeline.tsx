@@ -59,12 +59,13 @@ const Timeline: React.FC<TimelineProps> = ({ id, title, data }) => {
                         </div>
 
                         <div
-                            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40px] h-[40px] sm:w-[60px] sm:h-[60px] md:w-[80px] md:h-[80px] rounded-full overflow-hidden border-2 border-text-dark bg-white flex items-center justify-center -mt-10 md:mt-0"
-                        >
+                            className="hidden xl:absolute xl:top-1/2 xl:left-1/2 xl:-translate-x-1/2 xl:-translate-y-1/2 
+xl:w-[80px] xl:h-[80px] rounded-full overflow-hidden border-2 border-text-dark bg-white 
+xl:flex xl:items-center xl:justify-center xl:mt-0"                        >
                             <img
                                 src={entry.imageSrc || '../assets/experience.png'}
                                 alt={`${entry.title} logo`}
-                                className="max-w-[80%] max-h-[80%] object-contain"
+                                className="max-w-[90%] max-h-[90%] object-contain"
                             />
                         </div>
                     </div>
