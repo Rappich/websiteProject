@@ -13,7 +13,6 @@ const ContactSection: React.FC = () => {
                 Contact Me
             </h1>
             <div className="contact-info-container flex flex-col sm:flex-row flex-wrap justify-center gap-8 sm:gap-12 my-8 mx-auto p-4 sm:p-6 bg-bg-light rounded-2xl border-[0.1rem] border-border-light">
-                {/* Email */}
                 <div className="contact-info-item flex items-center justify-start gap-4 sm:gap-6">
                     <img
                         src={emailIcon}
@@ -29,7 +28,6 @@ const ContactSection: React.FC = () => {
                         </a>
                     </p>
                 </div>
-                {/* LinkedIn */}
                 <div className="contact-info-item flex items-center justify-start gap-4 sm:gap-6">
                     <img
                         src={linkedinIcon}

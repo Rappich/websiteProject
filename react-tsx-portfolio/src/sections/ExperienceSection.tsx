@@ -61,7 +61,7 @@ const ExperienceSection: React.FC = () => {
 
             <div className="flex flex-col items-center justify-center mt-8">
                 <div className="flex flex-col lg:flex-row gap-8 w-full justify-center">
-                    <div className="w-full sm:max-w-md mx-auto bg-white rounded-2xl border text-center p-6 min-h-[400px]">
+                    <div className="w-full sm:max-w-lg mx-auto bg-white rounded-2xl border text-center p-6 min-h-[400px]">
                         <h3 className="text-lg md:text-xl font-semibold text-text-primary mb-8">
                             Frontend Development
                         </h3>
@@ -72,7 +72,7 @@ const ExperienceSection: React.FC = () => {
                         </div>
                     </div>
 
-                    <div className="w-full sm:max-w-md mx-auto bg-white rounded-2xl border text-center p-6 min-h-[400px]">
+                    <div className="w-full sm:max-w-lg mx-auto bg-white rounded-2xl border text-center p-6 min-h-[400px]">
                         <h3 className="text-lg md:text-xl font-semibold text-text-primary mb-8">
                             Backend Development & Tools
                         </h3>

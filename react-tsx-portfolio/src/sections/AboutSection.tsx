@@ -63,7 +63,7 @@ const AboutSection: React.FC = () => {
                     </div>
                     <div className="max-w-4xl mx-auto text-center xl:text-left xl:ml-0 xl:mr-auto xl:px-0 w-full flex flex-wrap xl:flex-nowrap gap-8 justify-center xl:justify-start">
 
-                        <div className="flex flex-wrap xl:flex-nowrap gap-8 justify-center">
+                        <div className="flex flex-wrap flex-col sm:flex-row xl:flex-nowrap gap-8 justify-center w-full">
                             <div className="flex flex-col pt-6 flex-1 bg-white rounded-2xl border-[0.1rem] border-border-light text-center">
                                 <img src="/assets/experience.png" alt="Experience icon" className="icon h-8 mx-auto" />
                                 <h3 className="font-semibold text-lg my-2">Professional Background</h3>
