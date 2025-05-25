@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { NavigationArrow, CloseButton } from '../components/Navigation';
 import { useInView } from 'react-intersection-observer';
 import SwitchToggle from '../components/SwitchToggle';
@@ -14,8 +14,22 @@ const AboutSection: React.FC = () => {
         triggerOnce: false
     });
 
+    const workTimelineRef = useRef<HTMLDivElement>(null);
+    const educationTimelineRef = useRef<HTMLDivElement>(null);
+
     const handleExpandClick = (targetId: string) => {
-        setOpenSectionId((prevId) => (prevId === targetId ? null : targetId));
+        setOpenSectionId((prevId) => {
+            const newId = prevId === targetId ? null : targetId;
+            setTimeout(() => {
+                if (newId === 'expanded-timeline') {
+                    workTimelineRef.current?.scrollIntoView({ behavior: 'smooth' });
+                } else if (newId === 'expanded-timeline-2') {
+                    educationTimelineRef.current?.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 200);
+
+            return newId;
+        });
     };
     const handleCloseTimeline = () => {
         setOpenSectionId(null);
@@ -102,20 +116,24 @@ const AboutSection: React.FC = () => {
 
             </div>
             {openSectionId === 'expanded-timeline' && (
-                <Timeline
-                    id="expanded-timeline"
-                    title="Work Experience"
-                    data={workExperienceData}
-                    onClose={handleCloseTimeline}
-                />
+                <div ref={workTimelineRef}>
+                    <Timeline
+                        id="expanded-timeline"
+                        title="Work Experience"
+                        data={workExperienceData}
+                        onClose={handleCloseTimeline}
+                    />
+                </div>
             )}
             {openSectionId === 'expanded-timeline-2' && (
-                <Timeline
-                    id="expanded-timeline-2"
-                    title="Education"
-                    data={educationData}
-                    onClose={handleCloseTimeline}
-                />
+                <div ref={educationTimelineRef}>
+                    <Timeline
+                        id="expanded-timeline-2"
+                        title="Education"
+                        data={educationData}
+                        onClose={handleCloseTimeline}
+                    />
+                </div>
             )}
 
 

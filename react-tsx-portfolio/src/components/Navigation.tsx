@@ -2,7 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown, faTimes, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 
-const commonFixedClasses = "arrow absolute right-8 bottom-8 z-10 cursor-pointer text-3xl text-black hover:text-gray-500 transition-opacity duration-300 ease-in-out hidden xl:inline-flex xl:items-center xl:justify-center";
+const commonFixedClasses = "arrow absolute right-4 bottom-4 sm:right-6 sm:bottom-6 xl:right-8 xl:bottom-8 z-10 cursor-pointer text-2xl sm:text-3xl text-black hover:text-gray-500 transition-opacity duration-300 ease-in-out inline-flex items-center justify-center";
 
 const visibilityClass = (isVisible: boolean) => isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none';
 

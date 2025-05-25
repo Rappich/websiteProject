@@ -36,30 +36,37 @@ const responsive = {
 
 const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ projects }) => {
   return (
-    <div className="max-w-screen-xl mx-auto px-4 sm:px-6 xl:px-10">
-      <div className="text-center mb-10">
-        <p className="text-center text-gray-600 font-semibold">Browse My Recent</p>
-        <h1 className="text-3xl xl:text-5xl text-gray-600 text-center font-bold">Projects</h1>
+    <section className="w-full max-w-screen-xl mx-auto px-4 sm:px-6 xl:px-8 2xl:px-6">
+      <div className="max-w-screen-xl mx-auto text-center mb-10">
+        <p className="text-gray-600 font-semibold">Browse My Recent</p>
+        <h2 className="text-3xl xl:text-5xl text-gray-700 font-bold">Projects</h2>
       </div>
-      <Carousel
-        swipeable
-        draggable
-        showDots
-        responsive={responsive}
-        ssr
-        infinite
-        autoPlay={false}
-        keyBoardControl
-        transitionDuration={500}
-        removeArrowOnDeviceType={["tablet", "mobile"]}
-        dotListClass="custom-dot-list-style"
-        itemClass="px-2"
-      >
-        {projects.map((project) => (
-          <ProjectCard key={project.id} {...project} />
-        ))}
-      </Carousel>
-    </div>
+
+      <div className="relative w-full">
+        <Carousel
+          swipeable
+          draggable
+          showDots
+          responsive={responsive}
+          ssr
+          infinite
+          autoPlay={false}
+          keyBoardControl
+          transitionDuration={500}
+          removeArrowOnDeviceType={["tablet", "mobile"]}
+          renderDotsOutside={true}
+          containerClass="pb-10"
+          dotListClass="flex justify-centermt-6"
+          itemClass="px-1 sm:px-2 xl:px-3 2xl:px-2"
+        >
+          {projects.map((project) => (
+            <div key={project.id} className="h-full">
+              <ProjectCard {...project} />
+            </div>
+          ))}
+        </Carousel>
+      </div>
+    </section>
   );
 };
 
