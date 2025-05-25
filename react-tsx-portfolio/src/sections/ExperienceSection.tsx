@@ -54,7 +54,8 @@ const ExperienceSection: React.FC = () => {
         <section
             id="experience"
             ref={sectionInViewRef}
-            className="relative pt-6 pb-20 px-4 sm:px-6 xl:px-10 box-border max-w-screen-xl mx-auto"
+            className="relative pt-6 pb-24 sm:pb-32 xl:pb-40 px-4 sm:px-6 xl:px-10 box-border max-w-screen-xl mx-auto"
+
         >
             <h2 className="text-base sm:text-lg font-semibold  text-gray-600 text-center mb-1">Explore My</h2>
             <h1 className="text-3xl xl:text-5xl text-center  text-gray-600 font-bold">Programming Skills</h1>

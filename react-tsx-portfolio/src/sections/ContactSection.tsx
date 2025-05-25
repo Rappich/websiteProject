@@ -6,7 +6,7 @@ const ContactSection: React.FC = () => {
     return (
         <section
             id="contact"
-            className="flex flex-col justify-center pt-[4vh] px-[5%] xl:px-40 h-auto xl:h-[60vh] box-border"
+            className="flex flex-col justify-center pt-12 pb-24 px-[5%] xl:px-40 box-border"
         >
             <p className="section__text__p1 text-center font-semibold">Get in Touch</p>
             <h1 className="title text-3xl xl:text-5xl text-center font-bold mb-4">

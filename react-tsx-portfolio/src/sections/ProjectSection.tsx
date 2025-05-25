@@ -50,7 +50,7 @@ const ProjectsSection: React.FC = () => {
   });
 
   return (
-    <section id="projects" ref={sectionInViewRef} className="pt-6 pb-20">
+    <section id="projects" ref={sectionInViewRef} className="pt-6 pb-24 sm:pb-6 xl:pb-12">
       <ProjectsCarousel projects={projectsData} />
       <NavigationArrow
         targetId="contact"

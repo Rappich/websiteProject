@@ -34,7 +34,7 @@ const Timeline: React.FC<TimelineProps> = ({ id, title, data }) => {
                     <div key={entry.id} className="relative flex flex-col items-center lg:flex-row lg:items-start">
                         <div
                             className={clsx(
-                                "relative w-full lg:w-[45%] mb-10 lg:mb-0", // Increased margin for better spacing on small screens
+                                "relative w-full lg:w-[45%] mb-10 lg:mb-0",
                                 {
                                     'lg:mr-auto': entry.position === 'left',
                                     'lg:ml-auto': entry.position === 'right',
@@ -60,8 +60,9 @@ const Timeline: React.FC<TimelineProps> = ({ id, title, data }) => {
 
                         <div
                             className="hidden xl:absolute xl:top-1/2 xl:left-1/2 xl:-translate-x-1/2 xl:-translate-y-1/2 
-xl:w-[80px] xl:h-[80px] rounded-full overflow-hidden border-2 border-text-dark bg-white 
-xl:flex xl:items-center xl:justify-center xl:mt-0"                        >
+                                        xl:w-[80px] xl:h-[80px] rounded-full overflow-hidden border-2 border-text-dark bg-white 
+                                        xl:flex xl:items-center xl:justify-center xl:mt-0"
+                        >
                             <img
                                 src={entry.imageSrc || '../assets/experience.png'}
                                 alt={`${entry.title} logo`}
