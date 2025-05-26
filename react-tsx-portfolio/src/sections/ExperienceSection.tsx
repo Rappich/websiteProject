@@ -54,38 +54,41 @@ const ExperienceSection: React.FC = () => {
         <section
             id="experience"
             ref={sectionInViewRef}
-            className="relative pt-6 pb-24 sm:pb-32 xl:pb-40 px-4 sm:px-6 xl:px-10 box-border max-w-screen-xl mx-auto"
+            className="relative pt-6 px-5 xl:px-10 min-h-fit box-border max-w-screen-xl mx-auto"
 
         >
-            <h2 className="text-base sm:text-lg font-semibold  text-gray-600 text-center mb-1">Explore My</h2>
-            <h1 className="text-3xl xl:text-5xl text-center  text-gray-600 font-bold">Programming Skills</h1>
+            <div className="pb-32 sm:pb-32 xl:pb-40">
 
-            <div className="flex flex-col items-center justify-center mt-8">
-                <div className="flex flex-col lg:flex-row gap-8 w-full justify-center">
-                    <div className="w-full sm:max-w-lg mx-auto bg-white rounded-2xl border text-center p-6 min-h-[400px]">
-                        <h3 className="text-lg md:text-xl font-semibold text-text-primary mb-8">
-                            Frontend Development
-                        </h3>
-                        <div className="flex flex-col items-center space-y-4 px-4 md:px-8">
-                            {frontendSkills.map((skill) => (
-                                <ProgressBar key={skill.name} name={skill.name} level={skill.level} />
-                            ))}
+                <h2 className="text-base sm:text-lg font-semibold  text-gray-600 text-center mb-1">Explore My</h2>
+                <h1 className="text-3xl xl:text-5xl text-center  text-gray-600 font-bold">Programming Skills</h1>
+
+                <div className="flex flex-col items-center justify-center mt-8">
+                    <div className="flex flex-col lg:flex-row gap-8 w-full justify-center">
+                        <div className="w-full sm:max-w-lg mx-auto bg-white rounded-2xl border text-center p-6 min-h-[400px]">
+                            <h3 className="text-lg md:text-xl font-semibold text-text-primary mb-8">
+                                Frontend Development
+                            </h3>
+                            <div className="flex flex-col items-center space-y-4 px-4 md:px-8">
+                                {frontendSkills.map((skill) => (
+                                    <ProgressBar key={skill.name} name={skill.name} level={skill.level} />
+                                ))}
+                            </div>
                         </div>
-                    </div>
 
-                    <div className="w-full sm:max-w-lg mx-auto bg-white rounded-2xl border text-center p-6 min-h-[400px]">
-                        <h3 className="text-lg md:text-xl font-semibold text-text-primary mb-8">
-                            Backend Development & Tools
-                        </h3>
-                        <div className="flex flex-col items-center space-y-4 px-4 md:px-8">
-                            {backendSkills.map((skill) => (
-                                <ProgressBar key={skill.name} name={skill.name} level={skill.level} />
-                            ))}
+                        <div className="w-full sm:max-w-lg mx-auto bg-white rounded-2xl border text-center p-6 min-h-[400px]">
+                            <h3 className="text-lg md:text-xl font-semibold text-text-primary mb-8">
+                                Backend Development & Tools
+                            </h3>
+                            <div className="flex flex-col items-center space-y-4 px-4 md:px-8">
+                                {backendSkills.map((skill) => (
+                                    <ProgressBar key={skill.name} name={skill.name} level={skill.level} />
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="mt-8 flex justify-center gap-4">
+            <div className="mb-80 flex justify-center gap-4">
 
                 <NavigationArrow
                     targetId="projects"
@@ -94,6 +97,7 @@ const ExperienceSection: React.FC = () => {
                     icon={faArrowDown}
                 />
             </div>
+
         </section>
 
     );

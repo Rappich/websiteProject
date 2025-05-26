@@ -53,91 +53,91 @@ const AboutSection: React.FC = () => {
         <section
             id="about"
             ref={ref}
-            className="relative pt-6 pb-60 sm:pb-32 xl:pb-40 px-5 xl:px-10 min-h-fit box-border max-w-screen-xl mx-auto"
+            className="relative pt-6 px-5 xl:px-10 min-h-fit box-border max-w-screen-xl mx-auto"
         >
-            <p className="section__text__p1 text-center  text-gray-600 font-semibold">Get To Know More</p>
-            <h1 className="title text-3xl xl:text-5xl  text-gray-600 text-center font-bold">About Me</h1>
+            <div className="pb-32 sm:pb-32 xl:pb-40">
+                <p className="section__text__p1 text-center  text-gray-600 font-semibold">Get To Know More</p>
+                <h1 className="title text-3xl xl:text-5xl  text-gray-600 text-center font-bold">About Me</h1>
 
-            <div className="flex flex-col xl:flex-row gap-8 mt-8">
-                <div className="w-full xl:w-1/3 flex justify-center xl:justify-start">
-                    <div className="w-[80%] max-w-[300px] sm:max-w-[350px] md:max-w-[300px] xl:max-w-[500px] aspect-square shrink-0">
-                        <img
-                            src="/assets/MC4.jpg"
-                            alt="Profile picture"
-                            className="rounded-2xl w-full h-full object-cover"
-                        />
+                <div className="flex flex-col xl:flex-row gap-8 mt-8">
+                    <div className="w-full xl:w-1/3 flex justify-center xl:justify-start">
+                        <div className="w-[80%] max-w-[300px] sm:max-w-[350px] md:max-w-[300px] xl:max-w-[500px] aspect-square shrink-0">
+                            <img
+                                src="/assets/MC4.jpg"
+                                alt="Profile picture"
+                                className="rounded-2xl w-full h-full object-cover"
+                            />
+                        </div>
                     </div>
-                </div>
 
-                <div className="w-full xl:w-2/3 flex flex-col gap-8">
-                    <div className="max-w-4xl mx-auto text-center xl:text-left">
-                        <p>
-                            I've transitioned from crafting HR strategies to diving into system development, a move that feels surprisingly natural. Turns out, problem-solving skills are pretty universal, whether you're optimizing workflows or debugging code. Leading projects in my previous roles taught me a lot about breaking down complex issues and building effective solutions, which is exactly what I'm doing now with code. I'm finding that my knack for understanding how things work, and how people interact with systems, is just as valuable in tech as it was in HR. Currently, I'm fully immersed in system development studies, eager to apply my unique perspective and build something cool.
-                        </p>
-                    </div>
-                    <div className="max-w-4xl mx-auto text-center xl:text-left xl:ml-0 xl:mr-auto xl:px-0 w-full flex flex-wrap xl:flex-nowrap gap-8 justify-center xl:justify-start">
+                    <div className="w-full xl:w-2/3 flex flex-col gap-8">
+                        <div className="max-w-4xl mx-auto text-center xl:text-left">
+                            <p>
+                                I've transitioned from crafting HR strategies to diving into system development, a move that feels surprisingly natural. Turns out, problem-solving skills are pretty universal, whether you're optimizing workflows or debugging code. Leading projects in my previous roles taught me a lot about breaking down complex issues and building effective solutions, which is exactly what I'm doing now with code. I'm finding that my knack for understanding how things work, and how people interact with systems, is just as valuable in tech as it was in HR. Currently, I'm fully immersed in system development studies, eager to apply my unique perspective and build something cool.
+                            </p>
+                        </div>
+                        <div className="max-w-4xl mx-auto text-center xl:text-left xl:ml-0 xl:mr-auto xl:px-0 w-full flex flex-wrap xl:flex-nowrap gap-8 justify-center xl:justify-start">
 
-                        <div className="flex flex-wrap flex-col sm:flex-row xl:flex-nowrap gap-8 justify-center w-full">
-                            <div className="flex flex-col pt-6 flex-1 bg-white rounded-2xl border-[0.1rem] border-border-light text-center">
-                                <img src="/assets/experience.png" alt="Experience icon" className="icon h-8 mx-auto" />
-                                <h3 className="font-semibold text-lg my-2">Professional Background</h3>
-                                <p className="text-text-primary">
-                                    9+ years <br /> Strategic HR and process optimization
-                                </p>
-                                <div className="switch-container w-full pt-2 flex justify-start items-center pl-4 pb-4 mt-auto">
-                                    <SwitchToggle
-                                        id="work-experience-toggle"
-                                        labelText="Show Work Experience"
-                                        checked={openSectionId === 'expanded-timeline'}
-                                        onChange={() => handleExpandClick('expanded-timeline')}
-                                    />
+                            <div className="flex flex-wrap flex-col sm:flex-row xl:flex-nowrap gap-8 justify-center w-full">
+                                <div className="flex flex-col pt-6 flex-1 bg-white rounded-2xl border-[0.1rem] border-border-light text-center">
+                                    <img src="/assets/experience.png" alt="Experience icon" className="icon h-8 mx-auto" />
+                                    <h3 className="font-semibold text-lg my-2">Professional Background</h3>
+                                    <p className="text-text-primary">
+                                        9+ years <br /> Strategic HR and process optimization
+                                    </p>
+                                    <div className="switch-container w-full pt-2 flex justify-start items-center pl-4 pb-4 mt-auto">
+                                        <SwitchToggle
+                                            id="work-experience-toggle"
+                                            labelText="Show Work Experience"
+                                            checked={openSectionId === 'expanded-timeline'}
+                                            onChange={() => handleExpandClick('expanded-timeline')}
+                                        />
 
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div className="flex flex-col pt-6 flex-1 bg-white rounded-2xl border-[0.1rem] border-border-light text-center">
-                                <img src="/assets/education.png" alt="Education icon" className="icon h-8 mx-auto" />
-                                <h3 className="font-semibold text-lg my-2">Education</h3>
-                                <p className="text-text-primary">
-                                    B.Sc. Psychology <br /> System Development (Current)
-                                </p>
-                                <div className="switch-container w-full pt-2 flex justify-start items-center pl-4 pb-4 mt-auto">
-                                    <SwitchToggle
-                                        id="education-toggle"
-                                        labelText="Show Education"
-                                        checked={openSectionId === 'expanded-timeline-2'}
-                                        onChange={() => handleExpandClick('expanded-timeline-2')}
-                                    />
+                                <div className="flex flex-col pt-6 flex-1 bg-white rounded-2xl border-[0.1rem] border-border-light text-center">
+                                    <img src="/assets/education.png" alt="Education icon" className="icon h-8 mx-auto" />
+                                    <h3 className="font-semibold text-lg my-2">Education</h3>
+                                    <p className="text-text-primary">
+                                        B.Sc. Psychology <br /> System Development (Current)
+                                    </p>
+                                    <div className="switch-container w-full pt-2 flex justify-start items-center pl-4 pb-4 mt-auto">
+                                        <SwitchToggle
+                                            id="education-toggle"
+                                            labelText="Show Education"
+                                            checked={openSectionId === 'expanded-timeline-2'}
+                                            onChange={() => handleExpandClick('expanded-timeline-2')}
+                                        />
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
+                </div>
+                {openSectionId === 'expanded-timeline' && (
+                    <div ref={workTimelineRef}>
+                        <Timeline
+                            id="expanded-timeline"
+                            title="Work Experience"
+                            data={workExperienceData}
+                            onClose={handleCloseTimeline}
+                        />
+                    </div>
+                )}
+                {openSectionId === 'expanded-timeline-2' && (
+                    <div ref={educationTimelineRef}>
+                        <Timeline
+                            id="expanded-timeline-2"
+                            title="Education"
+                            data={educationData}
+                            onClose={handleCloseTimeline}
+                        />
+                    </div>
+                )}
             </div>
-            {openSectionId === 'expanded-timeline' && (
-                <div ref={workTimelineRef}>
-                    <Timeline
-                        id="expanded-timeline"
-                        title="Work Experience"
-                        data={workExperienceData}
-                        onClose={handleCloseTimeline}
-                    />
-                </div>
-            )}
-            {openSectionId === 'expanded-timeline-2' && (
-                <div ref={educationTimelineRef}>
-                    <Timeline
-                        id="expanded-timeline-2"
-                        title="Education"
-                        data={educationData}
-                        onClose={handleCloseTimeline}
-                    />
-                </div>
-            )}
-
-
-            <div className="pb-6 flex justify-center gap-4">
+            <div className="mb-80 flex justify-center gap-4">
                 {openSectionId === null && (
                     <NavigationArrow
                         targetId="experience"

@@ -1,14 +1,15 @@
 import React from "react";
-import ProjectsCarousel, { Project } from "../components/ProjectCarousel";
+import { useInView } from "react-intersection-observer";
+import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import ProjectsCarousel from "../components/ProjectCarousel";
+import { NavigationArrow } from '../components/Navigation';
+
 import webDevImage from "/assets/www.png";
 import munchkinImage from "/assets/munchkin.jpg";
 import awsImage from "/assets/AWS2.jpg";
 import NeverAloneImage from "/assets/NeverAlone.png";
-import { useInView } from "react-intersection-observer";
-import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
-import { NavigationArrow } from "../components/Navigation";
 
-const projectsData: Project[] = [
+const projectsData = [
   {
     id: 1,
     imageSrc: webDevImage,
@@ -50,14 +51,32 @@ const ProjectsSection: React.FC = () => {
   });
 
   return (
-    <section id="projects" ref={sectionInViewRef} className="pt-6 pb-24 sm:pb-6 xl:pb-12">
-      <ProjectsCarousel projects={projectsData} />
-      <NavigationArrow
-        targetId="contact"
-        ariaLabel="Go to contact section"
-        isVisible={isSectionInView}
-        icon={faArrowDown}
-      />
+    <section
+      id="projects"
+      ref={sectionInViewRef}
+      className="relative pt-6 px-5 xl:px-10 min-h-fit box-border max-w-screen-xl mx-auto"
+    >
+      <div className="pb-32 sm:pb-32 xl:pb-40">
+        <h2 className="text-base sm:text-lg font-semibold text-gray-600 text-center mb-1">
+          Browse My Recent
+        </h2>
+        <h1 className="text-3xl xl:text-5xl text-center text-gray-600 font-bold">
+          Projects
+        </h1>
+
+        <div className="mt-10">
+          <ProjectsCarousel projects={projectsData} />
+        </div>
+      </div>
+
+      <div className="mb-80 flex justify-center gap-4">
+        <NavigationArrow
+          targetId="contact"
+          ariaLabel="Go to contact section"
+          isVisible={isSectionInView}
+          icon={faArrowDown}
+        />
+      </div>
     </section>
   );
 };
