@@ -19,7 +19,7 @@ const HeroSection: React.FC = () => {
     return (
         <section
             id="profile"
-            className="flex flex-col xl:flex-row items-center justify-center min-h-screen gap-8 px-5 pt-4 pb-12 sm:pb-20 xl:px-8 xl:pt-8 xl:pb-32"
+            className="flex flex-col xl:flex-row items-center justify-center min-h-screen gap-8 px-5 pt-4 pb-6 sm:pb-20 xl:px-8 xl:pt-8 xl:pb-32"
 
         >
             <div className="w-40 h-40 sm:w-64 sm:h-64 xl:w-[400px] xl:h-[400px] flex justify-center items-center">

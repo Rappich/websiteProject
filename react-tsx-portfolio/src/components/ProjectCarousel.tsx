@@ -48,7 +48,7 @@ const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ projects }) => {
         keyBoardControl
         transitionDuration={500}
         removeArrowOnDeviceType={["tablet", "mobile"]}
-        renderDotsOutside={true}
+        renderDotsOutside={false}
         containerClass="pb-10"
         dotListClass="flex justify-center mt-6"
         itemClass="px-1 sm:px-2 xl:px-3 2xl:px-2"

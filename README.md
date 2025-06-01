@@ -1,63 +1,68 @@
-# Website Project - Work in Progress 
+# Personal Portfolio Website
 
-## Overview  
+## Overview
 
-Welcome to my personal **resume and company website**! My name is **Fredrik Rappich**, a former **HR professional** transitioning into **IT development**, specializing in **C/C++ programming**.  
+This is my personal **portfolio website**, built to showcase my background, skills, and projects as I transition from HR to system development.
 
-I started this project with **HTML, CSS, and JavaScript** to build a solid foundation in web development. As I progress, I’m integrating **React, Node.js, Tailwind CSS, and TypeScript** to create a modern, scalable web application.  
+The project started with a static website built in **HTML, CSS, and JavaScript** to establish a strong foundation. I later refactored it into a modern web application using **React**, **Node.js**, **TypeScript**, and **Tailwind CSS** — to deepen my understanding of current web development practices.
 
-This project serves as both:  
-- A personal **resume website**
-- A showcase for **Rappich Consulting AB**, my consulting business in **HR & IT**  
+While the original plan included building a company site for **Rappich Consulting AB**, that will now be developed separately in another project.
 
 ---
 
-## Project Goals  
+## Purpose
 
-- Develop practical skills in **HTML, CSS, JavaScript, React, Node.js, Tailwind CSS, and TypeScript**  
-- Learn how to build, optimize, and deploy websites  
-- Establish a **professional online presence** and delve deeper into front-end development, a area i'm not studying in school
+This project serves two main purposes:
 
----
+- A **learning platform** to build practical experience with modern web development tools and workflows.
+- A **professional portfolio site** that I actively share with recruiters and collaborators.
 
-## Tools & Technologies  
-
-### **Languages & Frameworks**  
-- HTML, CSS, JavaScript
-- React, Node.js, TypeScript
-- Tailwind CSS  
-
-### **Development & Build Tools**  
-- npm / Yarn – Package management
-- Vite – Fast build tool for React
-- Webpack – Module bundler  
-
-### **Version Control & Deployment**  
-- Git & GitHub – Source control
-- Netlify / Vercel – Hosting (Planned)
-- Docker – Containerization (Exploring)  
+It reflects both my technical progress and my personal journey — and acts as a central place to view my experience, contact info, and selected projects.
 
 ---
 
-## Website Features  
+## What I’ve Learned
 
-- **About Me** – My background, skills & journey into IT
-- **Skills** – Technologies & programming languages I’m proficient in
-- **Projects** – Showcasing my projects within IT
-- **Experience & Education** – My professional & academic background
-- **Contact** – Get in touch with me
-- **Company Page** – Details about **Rappich Consulting AB** and its services in **HR & IT**  
+- The difference between static and dynamic web development
+- Key concepts like **mobile-first design**, **responsive layouts**, and **component-based architecture**
+- How to structure a real project with **React + TypeScript**
+- Tailwind CSS for fast and maintainable styling
+- Tools like **Git**, **Vite**, and **npm** in a full workflow
 
 ---
 
-## Repository Structure  
+## Tech Stack
+
+### Languages & Frameworks
+- HTML, CSS, JavaScript (initial version)
+- React, Node.js, TypeScript, Tailwind CSS (current stack)
+
+### Tools
+- Vite – Fast build tool
+- Git & GitHub – Version control
+- npm – Package managers
+- Docker – (will be used in the future)
+
+---
+
+## Features
+
+- **About Me** – Background, career shift & current focus
+- **Skills** – Tools & technologies I work with
+- **Projects** – A growing list of my technical work
+- **Experience & Education** – Timeline of my professional journey
+- **Contact** – Simple way to reach out
+
+---
+
+## Folder Structure
 
 ```plaintext
 websiteProject/
-├── srcNew/                 # Original HTML, CSS, JS website
-├── react-js-portfolio/     # New React-based version
-├── portfolio/              # Additional portfolio-related content
-├── README.md               # Project overview & documentation
-├── .gitignore              # Ignored files
-├── todo.md                 # Development roadmap
-└── package.json            # Project dependencies
+├── srcNew/                 # Initial static site (HTML/CSS/JS)
+├── react-js-portfolio/     # Refactored React version
+├── portfolio/              # Assets and components
+├── README.md               # You're here!
+├── .gitignore              # Git exclusions
+├── todo.md                 # Roadmap and notes
+└── package.json            # Dependencies

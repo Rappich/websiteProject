@@ -46,8 +46,8 @@ const AboutSection: React.FC = () => {
     ];
 
     const educationData: TimelineEntry[] = [
-        { id: 'ed1', imageSrc: '/assets/education.png', title: 'System Development', subtitle: 'Chas Academy', duration: '2024 - Present', description: 'Lorum ipsum', listItems: [], position: 'left' },
-        { id: 'ed2', imageSrc: '/assets/education.png', title: 'B.Sc. Psychology', subtitle: 'Örebro Universitet', duration: '2011 - 2016', description: 'Lorum ipsum', listItems: [], position: 'right' },
+        { id: 'ed1', imageSrc: '/assets/CA.png', title: 'System Development', subtitle: 'Chas Academy', duration: '2024 - Present', description: 'Currently studying system development with a focus on C, C++, embedded systems, and cloud technologies. The program includes courses in low-level programming, real-time systems, operating system interaction, and tools like Docker and CI/CD.', listItems: [], position: 'left' },
+        { id: 'ed2', imageSrc: '/assets/oru.jpg', title: 'B.Sc. Psychology', subtitle: 'Örebro Universitet', duration: '2011 - 2016', description: 'Completed a Bachelor’s degree in Behavioural Science with a major in Psychology. The program covered individual and group behaviour, organizational psychology, and research methods. Additional courses included Work Environment & Health, Labour Law, Business Administration, and Rhetoric.', listItems: [], position: 'right' },
     ];
     return (
         <section
@@ -73,7 +73,7 @@ const AboutSection: React.FC = () => {
                     <div className="w-full xl:w-2/3 flex flex-col gap-8">
                         <div className="max-w-4xl mx-auto text-center xl:text-left">
                             <p>
-                                I've transitioned from crafting HR strategies to diving into system development, a move that feels surprisingly natural. Turns out, problem-solving skills are pretty universal, whether you're optimizing workflows or debugging code. Leading projects in my previous roles taught me a lot about breaking down complex issues and building effective solutions, which is exactly what I'm doing now with code. I'm finding that my knack for understanding how things work, and how people interact with systems, is just as valuable in tech as it was in HR. Currently, I'm fully immersed in system development studies, eager to apply my unique perspective and build something cool.
+                                I’ve always been interested in tech, and after several years in HR, I made the move into system development. I’m currently studying at Chas Academy, focusing on C, C++, backend development, and embedded systems. My experience in HR taught me how systems, people, and processes connectm, something I bring with me into tech, along with a user-first mindset and practical problem-solving skills. Outside of class, I work on side projects to deepen my learning, you will find some of them in the project section on this website. I’m now looking for a junior developer role where I can grow and contribute to real-world projects.
                             </p>
                         </div>
                         <div className="max-w-4xl mx-auto text-center xl:text-left xl:ml-0 xl:mr-auto xl:px-0 w-full flex flex-wrap xl:flex-nowrap gap-8 justify-center xl:justify-start">
