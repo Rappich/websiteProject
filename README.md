@@ -38,9 +38,10 @@ It reflects both my technical progress and my personal journey — and acts as a
 - React, Node.js, TypeScript, Tailwind CSS (current stack)
 
 ### Tools
-- Vite – Fast build tool
+- Vite – Fast development build tool
 - Git & GitHub – Version control
 - npm – Package managers
+- Vercel – Deployment platform (connected to rappich.se)
 - Docker – (will be used in the future)
 
 ---
