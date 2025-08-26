@@ -12,19 +12,18 @@ interface Skill {
 const frontendSkills: Skill[] = [
     { name: 'HTML', level: 5 },
     { name: 'CSS', level: 5 },
-    { name: 'JavaScript', level: 3 },
-    { name: 'React', level: 3 },
+    { name: 'JavaScript / Typescript', level: 4 },
+    { name: 'React / React Native', level: 3 },
     { name: 'Tailwind CSS', level: 4 },
-    { name: 'Typescript', level: 3 },
 ];
 
 const backendSkills: Skill[] = [
-    { name: 'C', level: 6 },
-    { name: 'C++', level: 6 },
-    { name: 'NoSQL', level: 2 },
-    { name: 'SQL', level: 3 },
-    { name: 'Git', level: 5 },
-    { name: 'Node.js', level: 2 },
+    { name: 'C / C++', level: 6 },
+    { name: 'Python', level: 3 },
+    { name: 'NoSQL (MongoDB)', level: 4 },
+    { name: 'SQL (Azure SQL)', level: 3 },
+    { name: 'DevOps / Cloud', level: 4 },
+    { name: 'Node.js / FastAPI', level: 4 },
     { name: 'Embedded Systems', level: 5 },
 ];
 
