@@ -20,8 +20,7 @@ const frontendSkills: Skill[] = [
 const backendSkills: Skill[] = [
     { name: 'C / C++', level: 6 },
     { name: 'Python', level: 3 },
-    { name: 'NoSQL (MongoDB)', level: 4 },
-    { name: 'SQL (Azure SQL)', level: 3 },
+    { name: 'MongoDB / Azure SQL', level: 4 },
     { name: 'DevOps / Cloud', level: 4 },
     { name: 'Node.js / FastAPI', level: 4 },
     { name: 'Embedded Systems', level: 5 },
