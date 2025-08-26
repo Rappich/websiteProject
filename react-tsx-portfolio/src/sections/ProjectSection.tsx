@@ -8,26 +8,35 @@ import webDevImage from "/assets/www.png";
 import munchkinImage from "/assets/munchkin.jpg";
 import awsImage from "/assets/AWS2.jpg";
 import NeverAloneImage from "/assets/NeverAlone.png";
+import Matchify from "/assets/Matchify.jpg";
 
 const projectsData = [
   {
     id: 1,
     imageSrc: webDevImage,
-    title: "Learning Web Development",
-    description: "Work in progress",
+    title: "Portfolio Website",
+    description: "My first website project",
     githubUrl: "https://github.com/Rappich/websiteProject.git",
     liveUrl: "#rappich.se",
   },
-  {
+    {
     id: 2,
-    imageSrc: munchkinImage,
-    title: "Munchkin Game",
-    description: "Work in progress",
-    githubUrl: "https://github.com/Rappich/MunchkinProject",
+    imageSrc: NeverAloneImage,
+    title: "Never Alone",
+    description: "IoT - School project",
+    githubUrl: "https://github.com/Rappich/NeverAlone",
+    liveUrl: "#",
+  },
+    {
+    id: 3,
+    imageSrc: Matchify,
+    title: "Matchify",
+    description: "Swipe-to-match platform/Under development",
+    githubUrl: "https://github.com/Rappich/Matchify",
     liveUrl: "#",
   },
   {
-    id: 3,
+    id: 4,
     imageSrc: awsImage,
     title: "Automated Watering System",
     description: "IoT - School project",
@@ -35,13 +44,13 @@ const projectsData = [
     liveUrl: "#",
   },
   {
-    id: 4,
-    imageSrc: NeverAloneImage,
-    title: "Never Alone",
-    description: "IoT - School project",
-    githubUrl: "https://github.com/ChasChallangeIII/NeverAlone",
+    id: 5,
+    imageSrc: munchkinImage,
+    title: "Munchkin Game",
+    description: "Work in progress/Paused",
+    githubUrl: "https://github.com/Rappich/MunchkinProject",
     liveUrl: "#",
-  },
+  }
 ];
 
 const ProjectsSection: React.FC = () => {
