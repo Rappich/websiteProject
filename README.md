@@ -60,10 +60,11 @@ It reflects both my technical progress and my personal journey — and acts as a
 
 ```plaintext
 websiteProject/
-├── srcNew/                 # Initial static site (HTML/CSS/JS)
+├── v1-legacy-static-site   # Initial static site (HTML/CSS/JS)
 ├── react-js-portfolio/     # Refactored React version
+  ├── todo.md               # Roadmap and notes
+  └── package.json          # Dependencies
 ├── portfolio/              # Assets and components
 ├── README.md               # You're here!
 ├── .gitignore              # Git exclusions
-├── todo.md                 # Roadmap and notes
-└── package.json            # Dependencies
+
