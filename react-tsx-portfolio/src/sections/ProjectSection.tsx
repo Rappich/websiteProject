@@ -19,7 +19,7 @@ const projectsData = [
     githubUrl: "https://github.com/Rappich/websiteProject.git",
     liveUrl: "#rappich.se",
   },
-    {
+  {
     id: 2,
     imageSrc: NeverAloneImage,
     title: "Never Alone",
@@ -27,7 +27,7 @@ const projectsData = [
     githubUrl: "https://github.com/Rappich/NeverAlone",
     liveUrl: "#",
   },
-    {
+  {
     id: 3,
     imageSrc: Matchify,
     title: "Matchify",
@@ -40,7 +40,7 @@ const projectsData = [
     imageSrc: awsImage,
     title: "Automated Watering System",
     description: "IoT - School project",
-    githubUrl: "https://github.com/sandpand/Grupp5-v-xtis",
+    githubUrl: "https://github.com/Rappich/Automated-Water-System.git",
     liveUrl: "#",
   },
   {
